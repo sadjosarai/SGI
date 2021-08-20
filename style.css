@@ -181,4 +181,18 @@ table tr td:last-child {
 .prod tr{
   cursor: pointer;
 }
+.arrow{
+  display:inline-flex;
+  vertical-align: middle;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.fa-angle-up:hover, .fa-angle-down:hover{
+ cursor: pointer;
+ background-color: #bfbfbf;
+}
+.fa-angle-up:active, .fa-angle-down:active{
+  cursor: pointer;
+  background-color: #504f4f;
+ }
 
