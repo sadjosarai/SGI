@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="form-container">
+        <header>Login Form</header>
+        <form action="/item.html" method="post">
+            <div class="field email">
+                <div class="input-area">
+                  <input type="text" name="usr" placeholder="Email Address">
+                  <i class="icon fas fa-envelope"></i>
+                  <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <span class="error error-txt">Email can't be blank</span>
+            </div>
+        
+            <div class="field password">
+                <div class="input-area">
+                  <input type="password" name="pwd" placeholder="Password">
+                  <i class="icon fas fa-lock"></i>
+                  <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <span class="error error-txt">Password can't be blank</span>
+            </div>
+            <div class="pass-txt"><a href="#">Forgot password?</a></div>
+            <input type="submit" value="Login">
+                
+        </form>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+</body>
+</html>
