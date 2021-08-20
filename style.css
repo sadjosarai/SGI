@@ -141,4 +141,44 @@ form input[type="submit"]{
 form input[type="submit"]:hover{
   background: #2c52ed;
 }
+/* ------------------------------------------------------------------------- */
+.wrapper{
+  width:100%;
+  min-height: 50vh;
+  padding:40px 30px 50px 30px;
+  text-align:center;
+  /* display: flexbox;
+  justify-content: center;
+  align-items: center; */
+  background-color: lightcyan;
+}
+table{
+  width:700px;
+  display:inline-block;
+  align-self: auto;
+  margin: auto 50px;
+  background-color: white;
+  text-align:left;
+  padding:none;
+  border-style:none;
+}
+table thead{
+  background-color: aquamarine;
+  border:1px solid aquamarine;
+}
+table tr td:first-child{
+  width: 600px;
+  padding-left:50px;
+}
+table tr td:last-child {
+  width: 100px;
+  padding-left: 10px;
+}
+.shopTable{
+  margin-bottom:50px
+}
+
+.prod tr{
+  cursor: pointer;
+}
 
