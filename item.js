@@ -39,6 +39,28 @@ function less(e){
         tar.rows[lastRowIndex].cells[1].innerHTML = t+"$";
     }
 }
+function pay(){
+    var stipend=1000;
+    let lastRowIndex=tar.rows.length - 1;
+    let total = parseInt(tar.rows[lastRowIndex].cells[1].innerHTML,10);
+    if(total<=stipend){
+        Swal.fire({
+            title: 'Payment Done!',
+            text: 'Thank you dear User!!',
+            icon: 'success',
+            confirmButtonText: 'ok'
+          }).then(() => {
+            window.location.href = "/item.html";
+          })
+    }else{
+        Swal.fire({
+            title: 'Payment not done!',
+            text: 'You don\'t have enough money in your account',
+            icon: 'error',
+            confirmButtonText: 'ok'
+          })
+    }
+}
 function add(e) {
     var newrow = new Array();
     var i = e.rowIndex;
@@ -88,3 +110,5 @@ function add(e) {
     console.log("cart length : "+cart.length);
     console.log();
 }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+

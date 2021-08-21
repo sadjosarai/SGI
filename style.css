@@ -143,14 +143,14 @@ form input[type="submit"]:hover{
 }
 /* ------------------------------------------------------------------------- */
 .wrapper{
-  width:100%;
+  width:50%;
   min-height: 50vh;
   padding:40px 30px 50px 30px;
   text-align:center;
-  /* display: flexbox;
+  display: flex;
+  flex-direction: column;;
   justify-content: center;
-  align-items: center; */
-  background-color: lightcyan;
+  align-items: center;
 }
 table{
   width:700px;
@@ -161,6 +161,7 @@ table{
   text-align:left;
   padding:none;
   border-style:none;
+  border:transparent;
 }
 table thead{
   background-color: aquamarine;
@@ -185,7 +186,8 @@ table tr td:last-child {
   display:inline-flex;
   vertical-align: middle;
   flex-direction: column;
-  margin-left: 50px;
+  margin-right: 10px;
+  float:right;
 }
 .fa-angle-up:hover, .fa-angle-down:hover{
  cursor: pointer;
@@ -202,19 +204,19 @@ table tr td:last-child {
   margin: auto;
  }
  .buy{
-   background-color: aquamarine;
+   background-color: rgb(31, 121, 91);
    height: 30px;
    width: 100px;
    font-size: 0.9rem;
    font-weight: 500;
-   color: rgb(107, 104, 104);
+   color: rgb(226, 226, 226);
    float:right;
    border:none;
    border-radius: 5px;
-   box-shadow: 0px 2px 2px gray;
+   box-shadow: inset 0px -2px 4px rgb(53, 75, 64);
  }
  .buy:hover{
-  background-color: rgb(28, 170, 123);
+  background-color: rgb(31, 121, 91);
   height: 30px;
   width: 100px;
   font-size: 0.9rem;
@@ -223,18 +225,18 @@ table tr td:last-child {
   float:right;
   border:none;
   border-radius: 5px;
-  box-shadow: 0px 2px 2px gray;
+  box-shadow: inset 0px -1px 3px rgb(53, 75, 64);
 }
 .buy:active{
-  background-color: rgb(28, 170, 123);
+  background-color: rgb(31, 121, 91);
   height: 30px;
   width: 100px;
   color: rgb(255, 255, 255);
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.88rem;
+  font-weight: 400;
   float:right;
   border:none;
   border-radius: 5px;
-  box-shadow:inset 0px 1px 2px white;
+  box-shadow:inset 0px -1px 2px rgb(53, 75, 64);
 }
 
