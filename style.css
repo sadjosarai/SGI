@@ -195,4 +195,46 @@ table tr td:last-child {
   cursor: pointer;
   background-color: #504f4f;
  }
+ .btn-wrapper{
+  width:700px;
+  display:inline-block;
+  align-self: auto;
+  margin: auto;
+ }
+ .buy{
+   background-color: aquamarine;
+   height: 30px;
+   width: 100px;
+   font-size: 0.9rem;
+   font-weight: 500;
+   color: rgb(107, 104, 104);
+   float:right;
+   border:none;
+   border-radius: 5px;
+   box-shadow: 0px 2px 2px gray;
+ }
+ .buy:hover{
+  background-color: rgb(28, 170, 123);
+  height: 30px;
+  width: 100px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  float:right;
+  border:none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px gray;
+}
+.buy:active{
+  background-color: rgb(28, 170, 123);
+  height: 30px;
+  width: 100px;
+  color: rgb(255, 255, 255);
+  font-size: 0.85rem;
+  font-weight: 500;
+  float:right;
+  border:none;
+  border-radius: 5px;
+  box-shadow:inset 0px 1px 2px white;
+}
 
