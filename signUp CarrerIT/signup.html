@@ -3,58 +3,83 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<!--
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+-->
+	<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+	<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>SG-Infosystems</title>
 </head>
 <body>
-<br><br>
 	<div class="container">
-		<form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Sign Up</p>
-			<div class="input-group">
-				<input type="text" placeholder="Name" name="Name" required>
-			</div>
-			<div class="input-group">
-				<input type="email" placeholder="Email" name="Email" required>
-			</div>
-			<div class="input-group">
-				<input type="company name" placeholder="Company name" name="ccname" required>
-			</div>
-			<div class="input-group">
-				<input type="company id" placeholder="Company id" name="cid" required>
-			</div>
-			<div class="input-group">
-				<input type="company pan card" placeholder=" Company pan card" name="cpancard" required>
-			</div>
-			<div class="input-group">
-				<input type="incorporation number" placeholder="Incorporation number" name="incorporation number" required>
-			</div>
-			<div class="input-group">
-				<input type="password" placeholder="Password" name="password" required>
-            </div>
-            <div class="input-group">
-				<input type="password" placeholder="Confirm Password" name="cpassword" required>
-			</div>
-			
-          <div class="descrip">
-            Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB)
-            <span style="float:right;"><a href="">List of supported documents</a>&nbsp;&nbsp;&nbsp;</span>
-          </div><br><br><span style="margin-left:100px"></span> Pan Card<sup style="color:rgb(255, 8, 8)"> * </sup><br>
-          <span style="margin-left:100px"></span><input type="file" name="" id="">
-          <br><span style="margin-left:100px"></span> Company Certificate<sup style="color:rgb(255, 8, 8)"> * </sup><br>
-          <span style="margin-left:100px"></span><input type="file" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:100px">
+		<div class="from-wrapper">
+			<form action="" method="POST" class="login-email">
+				<p class="login-text" style="font-size: 2rem; font-weight: 800;">Sign Up</p>
+				<div class="input-group">
+					<label for="name"><i class="fa fa-user" aria-hidden="true"></i></label>
+					<input type="text" placeholder="Name" name="Name" required>
+				</div>
+				<div class="input-group">
+					<label for="email"><i class="fa fa-envelope" aria-hidden="true"></i></label>
+					<input type="email" placeholder="Email" name="Email" required>
+				</div>
+				<div class="input-group">
+					<label for="company-name"><i class="fa fa-building" aria-hidden="true"></i></label>
+					<input type="text" placeholder="Company-name" name="ccname" required>
+				</div>
+				<div class="input-group">
+					<label for="email"><i class="fa fa-id-card" aria-hidden="true"></i></label>
+					<input type="text" placeholder="Company id" name="cid" required>
+				</div>
+				<div class="input-group">
+					<label for="email"><i class="fa fa-id-card" aria-hidden="true"></i></label>
+					<input type="text" placeholder=" Company pan card" name="cpancard" required>
+				</div>
+				<div class="input-group">
+					<label for="email"><i class="fa fa-balance-scale" aria-hidden="true"></i></label>
+					<input type="incorporation number" placeholder="Incorporation number" name="incorporation number" required>
+				</div>
+				<div class="input-group">
+					<label for="pass"><i class="fa fa-lock" aria-hidden="true"></i></label>
+					<input type="password" placeholder="Password" name="password" required>
+				</div>
+				<div class="input-group">
+					<label for="pass"><i class="fa fa-lock" aria-hidden="true"></i></label>
+					<input type="password" placeholder="Confirm Password" name="cpassword" required>
+				</div>
+				<div class="input-group">
+					<div id="captcha" >BhKAHF</div>
+					<input type="text" placeholder="enter captcha" name="captcha" required>
+				</div>
+				
+			  <div class="descrip">
+				Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB)
+				<span style="float:right;"><a href="">List of supported documents</a>&nbsp;&nbsp;&nbsp;</span>
+			  </div>
+			  <br><br>
+			  <span style="margin-left:100px"></span> Pan Card<sup style="color:rgb(255, 8, 8)"> * </sup>
+			  <br>
+			  <span style="margin-left:100px"></span><input type="file" name="" id="">
+			  <br>
+			  <span style="margin-left:100px"></span> Company Certificate<sup style="color:rgb(255, 8, 8)"> * </sup>
+			  <br>
+			  <span style="margin-left:100px"></span><input type="file" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:100px">
+	
+	
+				<div class="input-group">
+					<button name="submit" class="btn">Register</button>
+				</div>
+				<p class="login-register-text">Have an account? <a href="login.html">Login Here</a>.</p>
+			</form>
+		</div>
+		<div class="log-image">
 
-
-			<div class="input-group">
-				<button name="submit" class="btn">Register</button>
-			</div>
-			<p class="login-register-text">Have an account? <a href="login.html">Login Here</a>.</p>
-		</form>
+		</div>
 	</div>
-</fieldset>
+<script>
+
+</script>
 </body>
 </html>
