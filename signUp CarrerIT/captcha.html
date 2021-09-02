@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), ;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 400px;
+            min-height: 400px;
+            background: #FFF;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+            padding: 40px 30px;
+        }
+
+        .container .login-text {
+            color: #111;
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+            text-transform: capitalize;
+        }
+
+        .container .login-social {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+            margin-bottom: 25px;
+        }
+
+        .container .login-social a {
+            padding: 12px;
+            margin: 10px;
+            border-radius: 3px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+            text-decoration: none;
+            font-size: 1rem;
+            text-align: center;
+            color: #FFF;
+            transition: .3s;
+        }
+
+        .container .login-social a i {
+            margin-right: 5px;
+        }
+
+        .container .login-social a.facebook {
+            background: #4267B2;
+        }
+
+        .container .login-social a.twitter {
+            background: #1DA1F2;
+        }
+
+        .container .login-social a.google-plus {
+            background: #db4a39;
+        }
+
+        .container .login-social a.linkedin {
+            background: #0e76a8;
+        }
+
+        .container .login-social a.facebook:hover {
+            background: #3d5fa3;
+        }
+
+        .container .login-social a.twitter:hover {
+            background: #1991db;
+        }
+
+        .container .login-social a.google-plus:hover {
+            background: #ca4334;
+        }
+
+        .container .login-social a.linkedin:hover {
+            background: #0b5c81;
+        }
+
+        .container .login-email .input-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #e7e7e7;
+            flex-direction: row;
+            outline: none;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        #captcha {
+            margin-right: 10px;
+        }
+
+        .container .login-email .input-group input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1rem;
+            background: transparent;
+            transition: .3s;
+        }
+
+        .container .login-email .input-group input:focus,
+        .container .login-email .input-group input:valid {
+            border-color: #a29bfe;
+        }
+
+        .container .login-email .input-group .btn {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            text-align: center;
+            border: none;
+            background: #a29bfe;
+            outline: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            color: #FFF;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .container .login-email .input-group .btn:hover {
+            transform: translateY(-5px);
+            background: #6c5ce7;
+        }
+
+        .login-register-text {
+            color: #111;
+            font-weight: 600;
+        }
+
+        .login-register-text a {
+            text-decoration: none;
+            color: #6c5ce7;
+        }
+
+        @media (max-width: 430px) {
+            .container {
+                width: 300px;
+            }
+
+            .container .login-social {
+                display: block;
+            }
+
+            .container .login-social a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="from-wrapper">
+            <form action="" method="POST" class="login-email">
+                <p class="login-text" style="font-size: 2rem; font-weight: 800;">Sign Up</p>
+                <div class="input-group">
+                    <label for="name"><i class="fa fa-user" aria-hidden="true"></i></label>
+                    <input type="text" placeholder="Name" name="Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i></label>
+                    <input type="email" placeholder="Email" name="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="company-name"><i class="fa fa-building" aria-hidden="true"></i></label>
+                    <input type="text" placeholder="Company-name" name="ccname" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fa fa-id-card" aria-hidden="true"></i></label>
+                    <input type="text" placeholder="Company id" name="cid" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fa fa-id-card" aria-hidden="true"></i></label>
+                    <input type="text" placeholder=" Company pan card" name="cpancard" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fa fa-balance-scale" aria-hidden="true"></i></label>
+                    <input type="incorporation number" placeholder="Incorporation number" name="incorporation number"
+                        required>
+                </div>
+                <div class="input-group">
+                    <label for="pass"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="pass"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                    <input type="password" placeholder="Confirm Password" name="cpassword" required>
+                </div>
+                <div class="input-group">
+                    <div id="captcha">BhKAHF</div>
+                    <input type="text" placeholder="enter captcha" id="inputCaptcha" required>
+                </div>
+
+                <div class="descrip">
+                    Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB)
+                    <span style="float:right;"><a href="">List of supported documents</a>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <br><br>
+                <span style="margin-left:100px"></span> Pan Card<sup style="color:rgb(255, 8, 8)"> * </sup>
+                <br>
+                <span style="margin-left:100px"></span><input type="file" name="" id="">
+                <br>
+                <span style="margin-left:100px"></span> Company Certificate<sup style="color:rgb(255, 8, 8)"> * </sup>
+                <br>
+                <span style="margin-left:100px"></span><input type="file" name=""
+                    id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:100px">
+
+
+                    <div class="input-group">
+                        <button id="submit" class="btn">Register</button>
+                    </div>
+                    <p class="login-register-text">Have an account? <a href="login.html">Login Here</a>.</p>
+            </form>
+        </div>
+        <div class="log-image">
+
+        </div>
+    </div>
+    <script>
+        var allvalue = ['A', 'B', 'C', 'B', 'A', 'F', 'A', 'B', 'A', 'B', 'Q', 'B', 'A',
+            'c', 'A', 'B', 'A', 'B', 'x', 'B', 'A', 'y', 'z', 'B', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+        var cVal1 = allvalue[Math.floor(Math.random() * allvalue.length)];
+        var cVal2 = allvalue[Math.floor(Math.random() * allvalue.length)];
+        var cVal3 = allvalue[Math.floor(Math.random() * allvalue.length)];
+        var cVal4 = allvalue[Math.floor(Math.random() * allvalue.length)];
+        var cVal5 = allvalue[Math.floor(Math.random() * allvalue.length)];
+        var cVal6 = allvalue[Math.floor(Math.random() * allvalue.length)];
+
+        var cValue = cVal1 + cVal2 + cVal3 + cVal4 + cVal5 + cVal6;
+
+        document.getElementById("captcha").innerHTML = cValue;
+
+        var thisValue = "";
+        var inputCapcha = document.getElementById("inputCaptcha");
+        var submitbtn = document.getElementById("submit");
+
+        inputCapcha.addEventListener('change', function () {
+            thisValue = inputCapcha.value;
+            // alert(thisValue)
+        })
+        submitbtn.addEventListener('click', function () {
+            if (cValue == thisValue) {
+                alert('Valid');
+                document.logForm.submit();
+            } else if (inputCapcha.value == "") {
+                alert('Invalid Capcha');
+
+            } else {
+                alert('Invalid Capcha');
+
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--
+	<!--
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 -->
-	<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 	<link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<title>SG-Infosystems</title>
 </head>
+
 <body>
 	<div class="container">
 		<div class="from-wrapper">
@@ -39,7 +40,8 @@
 				</div>
 				<div class="input-group">
 					<label for="email"><i class="fa fa-balance-scale" aria-hidden="true"></i></label>
-					<input type="incorporation number" placeholder="Incorporation number" name="incorporation number" required>
+					<input type="incorporation number" placeholder="Incorporation number" name="incorporation number"
+						required>
 				</div>
 				<div class="input-group">
 					<label for="pass"><i class="fa fa-lock" aria-hidden="true"></i></label>
@@ -50,36 +52,71 @@
 					<input type="password" placeholder="Confirm Password" name="cpassword" required>
 				</div>
 				<div class="input-group">
-					<div id="captcha" >BhKAHF</div>
-					<input type="text" placeholder="enter captcha" name="captcha" required>
+					<div id="captcha">BhKAHF</div>
+					<input type="text" placeholder="enter captcha" id="inputCaptcha" required>
 				</div>
-				
-			  <div class="descrip">
-				Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB)
-				<span style="float:right;"><a href="">List of supported documents</a>&nbsp;&nbsp;&nbsp;</span>
-			  </div>
-			  <br><br>
-			  <span style="margin-left:100px"></span> Pan Card<sup style="color:rgb(255, 8, 8)"> * </sup>
-			  <br>
-			  <span style="margin-left:100px"></span><input type="file" name="" id="">
-			  <br>
-			  <span style="margin-left:100px"></span> Company Certificate<sup style="color:rgb(255, 8, 8)"> * </sup>
-			  <br>
-			  <span style="margin-left:100px"></span><input type="file" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:100px">
-	
-	
-				<div class="input-group">
-					<button name="submit" class="btn">Register</button>
+
+				<div class="descrip">
+					Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB)
+					<span style="float:right;"><a href="">List of supported documents</a>&nbsp;&nbsp;&nbsp;</span>
 				</div>
-				<p class="login-register-text">Have an account? <a href="login.html">Login Here</a>.</p>
+				<br><br>
+				<span style="margin-left:100px"></span> Pan Card<sup style="color:rgb(255, 8, 8)"> * </sup>
+				<br>
+				<span style="margin-left:100px"></span><input type="file" name="" id="">
+				<br>
+				<span style="margin-left:100px"></span> Company Certificate<sup style="color:rgb(255, 8, 8)"> * </sup>
+				<br>
+				<span style="margin-left:100px"></span><input type="file" name=""
+					id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:100px">
+
+
+					<div class="input-group">
+						<button id="submit" class="btn">Register</button>
+					</div>
+					<p class="login-register-text">Have an account? <a href="login.html">Login Here</a>.</p>
 			</form>
 		</div>
 		<div class="log-image">
 
 		</div>
 	</div>
-<script>
+	<script>
+		var allvalue = ['A', 'B', 'C', 'B', 'A', 'F', 'A', 'B', 'A', 'B', 'Q', 'B', 'A',
+			'c', 'A', 'B', 'A', 'B', 'x', 'B', 'A', 'y', 'z', 'B', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
-</script>
+		var cVal1 = allvalue[Math.floor(Math.random() * allvalue.length)];
+		var cVal2 = allvalue[Math.floor(Math.random() * allvalue.length)];
+		var cVal3 = allvalue[Math.floor(Math.random() * allvalue.length)];
+		var cVal4 = allvalue[Math.floor(Math.random() * allvalue.length)];
+		var cVal5 = allvalue[Math.floor(Math.random() * allvalue.length)];
+		var cVal6 = allvalue[Math.floor(Math.random() * allvalue.length)];
+
+		var cValue = cVal1 + cVal2 + cVal3 + cVal4 + cVal5 + cVal6;
+
+		document.getElementById("captcha").innerHTML = cValue;
+
+		var thisValue = "";
+		var inputCapcha = document.getElementById("inputCaptcha");
+		var submitbtn = document.getElementById("submit");
+
+		inputCapcha.addEventListener('change', function () {
+			thisValue = inputCapcha.value;
+			// alert(thisValue)
+		})
+		submitbtn.addEventListener('click', function () {
+			if (cValue == thisValue) {
+				alert('Valid');
+				document.logForm.submit();
+			} else if (inputCapcha.value == "") {
+				alert('Invalid Capcha');
+
+			} else {
+				alert('Invalid Capcha');
+
+			}
+		})
+	</script>
 </body>
+
 </html>
