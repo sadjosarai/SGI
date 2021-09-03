@@ -1,473 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</head>
-
-<body style="background-color:papayawhip">
-  <style>
-    :root {
-      --nav-icon-width: 50px;
-    }
-
-    body {
-      margin: 0px 0px;
-      padding: 0px 0px 0px 0px;
-    }
-
-    .navbar-inverse .navbar-brand:hover {
-      color: #fff;
-      background-color: transparent;
-    }
-
-    .wrapper {
-      height: 100vh;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .side-bar {
-      padding-top: 10px;
-      height: 100%;
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 18%;
-      background-color: #1e8293;
-      color: white;
-      /* padding: 10px 15px 10px 15px; */
-    }
-
-    .side-bar-collapsed {
-      padding-top: 10px;
-      height: 100%;
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: var(--nav-icon-width);
-      background-color: #1e8293;
-      color: white;
-      /* padding: 10px 15px 10px 15px; */
-    }
-
-    .side-bar .nav-title {
-      text-align: center;
-      width: 90%;
-      height: 70px;
-      border-bottom: 2px solid whitesmoke;
-    }
-
-    .side-bar-collapsed .nav-title {
-      text-align: center;
-      height: 50px;
-      width: 90%;
-      border-bottom: 2px solid whitesmoke;
-      display: none;
-    }
-
-    .side-bar .nav-bar {
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      width: 90%;
-      height: 80%;
-      transform: width 0.4s;
-    }
-
-    .side-bar-collapsed .nav-bar {
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      width: 90%;
-      height: 80%;
-      transform: width 0.4s;
-      flex-shrink: 0;
-    }
-
-    .side-bar .nav-bar .nav-item {
-      padding-bottom: 8px;
-      margin: auto;
-      width: 90%;
-      text-align: left;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .side-bar-collapsed .nav-bar .nav-item {
-      padding-bottom: 8px;
-      margin: auto;
-      width: 90%;
-      text-align: left;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .side-bar .nav-bar .nav-item:hover {
-      padding-bottom: 8px;
-      margin: auto;
-      width: 90%;
-      text-align: left;
-      margin: 20px auto;
-      border-bottom: 1px solid whitesmoke;
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .side-bar-collapsed .nav-bar .nav-item:hover {
-      padding-bottom: 8px;
-      margin: auto;
-      width: 90%;
-      text-align: left;
-      margin: 20px auto;
-      border-bottom: 1px solid whitesmoke;
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-    }
-
-    .side-bar .nav-bar .nav-item .icon {
-      margin-right: 10px;
-      width: var(--nav-icon-width);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .side-bar-collapsed .nav-bar .nav-item .icon {
-      margin-right: 10px;
-      padding-left: 5px;
-      width: var(--nav-icon-width);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .main {
-      padding: 0px 0px;
-      height: 100%;
-    }
-
-    .label-icon {
-      display: none;
-    }
-  </style>
-  <div class="wrapper">
-    <div class="side-bar-collapsed">
-      <div class="nav-title">
-        <h2>Career-IT Hub</h2>
-      </div>
-      <div class="nav-bar">
-        <div class="nav-item">
-          <div class="icon"><i>icon</i></div>
-          <span class='label-icon'>Dashboard</span>
-        </div>
-        <div class="nav-item">
-          <div class="icon"><i>icon</i></div>
-          <span class='label-icon'>Home</span>
-        </div>
-        <div class="nav-item">
-          <div class="icon"><i>icon</i></div>
-          <span class='label-icon'>Posted Jobs</span>
-        </div>
-        <div class="nav-item">
-          <div class="icon"><i>icon</i></div>
-          <span class='label-icon'>Previously Posted Jobs</span>
-        </div>
-        <div class="nav-item">
-          <div class="icon"><i>icon</i></div>
-          <span class='label-icon label'>HR</span>
-        </div>
-      </div>
-    </div>
-    <div class="main container-fluid">
-      <nav class=" navbar navbar-expand-lg navbar-light bg-light" style="background-color: #000107!important;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            style="font-family:Comic Sans MS, Comic Sans, cursive;color: #15b6e7!important;">C-IT<span
-              style="color: #fafafa!important;">HUB</span></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
-      <div class="container-fluid" style="background: papayawhip;    margin-top: 35px;
-                ">
-        <div class="container">
-          <table class="table ">
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Resume</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr id="fullhide">
-                <td>ABC</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
-                <td>
-                  <div class="dropdown dropright">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                      Status
-                    </button>
-                    <div class="dropdown-menu" style="background: navajowhite;">
-                      <a class="dropdown-item" onclick="showDiv('Shortlist')" href="#">Shortlist</a>
-                      <a class="dropdown-item" onclick="showDiv('Reject')" href="#">Reject</a>
-                      <a class="dropdown-item" onclick="showDiv('On Hold')" href="#">On Hold </a>
-                      <a class="dropdown-item" onclick="showDiv('Select For Next Round')" href="#">Select For Next
-                        Round
-                      </a>
-                    </div>
-                  </div>
-              </tr>
-              <tr>
-              <tr id="fullhide1">
-                <td>XYZ</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
-                <td>
-                  <div class="dropdown dropright">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                      Status
-                    </button>
-                    <div class="dropdown-menu" style="background: navajowhite;">
-                      <a class="dropdown-item" onclick="showDiv1('Shortlist')" href="#">Shortlist</a>
-                      <a class="dropdown-item" onclick="showDiv1('Reject')" href="#">Reject</a>
-                      <a class="dropdown-item" onclick="showDiv1('On Hold')" href="#">On Hold </a>
-                      <a class="dropdown-item" onclick="showDiv1('Select For Next Round')" href="#">Select For Next
-                        Round
-                      </a>
-                    </div>
-                  </div>
-              </tr>
-              <tr>
-              <tr id="fullhide2">
-                <td>UZI</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
-                <td>
-                  <div class="dropdown dropright">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                      Status
-                    </button>
-                    <div class="dropdown-menu" style="background: navajowhite;">
-                      <a class="dropdown-item" onclick="showDiv2('Shortlist')" href="#">Shortlist</a>
-                      <a class="dropdown-item" onclick="showDiv2('Reject')" href="#">Reject</a>
-                      <a class="dropdown-item" onclick="showDiv2('On Hold')" href="#">On Hold </a>
-                      <a class="dropdown-item" onclick="showDiv2('Select For Next Round')" href="#">Select For Next
-                        Round
-                      </a>
-                    </div>
-                  </div>
-              </tr>
-              <tr>
-              <tr id="fullhide3">
-                <td>AKM</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
-                <td>
-                  <div class="dropdown dropright">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                      Status
-                    </button>
-                    <div class="dropdown-menu" style="background: navajowhite;">
-                      <a class="dropdown-item" onclick="showDiv3('Shortlist')" href="#">Shortlist</a>
-                      <a class="dropdown-item" onclick="showDiv3('Reject')" href="#">Reject</a>
-                      <a class="dropdown-item" h onclick="showDiv3('On Hold')" href="#">On Hold </a>
-                      <a class="dropdown-item" onclick="showDiv3('Select For Next Round')" href="#">Select For Next
-                        Round
-                      </a>
-                    </div>
-                  </div>
-              </tr>
-            </tbody>
-          </table>
-          <div class="row">
-            <div class="col-md-4">
-              <h2>Short Listed Employee </h2>
-              <p id="showp1" style="display:none;">
-                ABC
-              </p>
-              <p id="showp2" style="display: none;">
-                XYZ
-              </p>
-              <p id="showp3" style="display: none;">
-                UZI
-              </p>
-              <p id="showp4" style="display: none;">
-                AKM
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h2 style="text-align: center;"> On Hold </h2>
-              <p id="showp11" style="display:none; text-align: center;">
-                ABC
-              </p>
-              <p id="showp22" style="display: none; text-align: center;">
-                XYZ
-              </p>
-              <p id="showp33" style="display: none; text-align: center;">
-                UZI
-              </p>
-              <p id="showp44" style="display: none; text-align: center;">
-                AKM
-              </p>
-            </div>
-            <div class="col-md-4">
-              <h2>Select For Next Round </h2>
-              <p id="showp111" style="display:none;">
-                ABC
-              </p>
-              <p id="showp222" style="display: none;">
-                XYZ
-              </p>
-              <p id="showp333" style="display: none;">
-                UZI
-              </p>
-              <p id="showp444" style="display: none;">
-                AKM
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-    const wrapper = document.querySelector(".wrapper");
-    var main = wrapper.querySelector('.main');
-    var sideBar = wrapper.querySelector(".side-bar-collapsed");
-    var title = sideBar.querySelector(".nav-title");
-    var navbar = sideBar.querySelector(".nav-bar");
-    var label = document.getElementsByClassName('label-icon');
-
-    sideBar.onmouseover = (e) => {
-      e.preventDefault();
-      sideBar.classList.remove("side-bar-collapsed");
-      sideBar.classList.add("side-bar");
-      for (l of label) {
-        l.style.display = "block";
-      }
-    }
-    main.onmouseover = (e) => {
-      e.preventDefault();
-      sideBar.classList.add("side-bar-collapsed");
-      sideBar.classList.remove("side-bar");
-      for (l of label) {
-        l.style.display = "none";
-      }
-    }
-
-
-
-  </script>
-  <script type="text/javascript">
-    function showDiv(x) {
-      if (x == 'Shortlist') {
-
-        $("#showp1").show();
-      }
-      else if (x == 'Reject') {
-        alert("Are you sure you want to delete");
-
-        $("#fullhide").hide();
-      }
-      else if (x == 'On Hold') {
-        $("#showp11").show();
-      }
-      else if (x == 'Select For Next Round') {
-        $("#showp111").show();
-      }
-      else {
-        document.getElementById('hidden_div').style.display = "none";
-      }
-    }
-  </script>
-  <script type="text/javascript">
-    function showDiv1(x) {
-
-
-      if (x == 'Shortlist') {
-
-        $("#showp2").show();
-      }
-      else if (x == 'Reject') {
-        alert("Are you sure you want to delete");
-
-        $("#fullhide2").hide();
-      }
-      else if (x == 'On Hold') {
-        $("#showp22").show();
-      }
-      else if (x == 'Select For Next Round') {
-        $("#showp222").show();
-      }
-      else {
-        document.getElementById('hidden_div').style.display = "none";
-      }
-    }
-  </script>
-  <script type="text/javascript">
-    function showDiv2(x) {
-      if (x == 'Shortlist') {
-
-        $("#showp3").show();
-      }
-      else if (x == 'Reject') {
-        alert("Are you sure you want to delete");
-
-        $("#fullhide3").hide();
-      }
-      else if (x == 'On Hold') {
-        $("#showp33").show();
-      }
-      else if (x == 'Select For Next Round') {
-        $("#showp333").show();
-      }
-      else {
-        document.getElementById('hidden_div').style.display = "none";
-      }
-    }
-  </script>
-  <script type="text/javascript">
-    function showDiv3(x) {
-      if (x == 'Shortlist') {
-        $("#showp4").show();
-      }
-      else if (x == 'Reject') {
-        alert("Are you sure you want to delete");
-        $("#fullhide4").hide();
-      }
-      else if (x == 'On Hold') {
-        $("#showp44").show();
-      }
-      else if (x == 'Select For Next Round') {
-        $("#showp444").show();
-      }
-      else {
-        document.getElementById('hidden_div').style.display = "none";
-      }
-    }
-  </script>
-</body>
-
-=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -504,29 +34,32 @@
       display: flex;
       flex-direction: row;
     }
-    .nav-container{
+
+    .nav-container {
       display: flex;
       flex-direction: row;
     }
 
-    .icon-toggle{
-      width :50px;
-      margin-right:1rem;
+    .icon-toggle {
+      width: 50px;
+      margin-right: 1rem;
       display: none;
       justify-content: center;
       align-items: center;
     }
-    .icon-toggle:hover{
-      width :50px;
-      margin-right:1rem;
+
+    .icon-toggle:hover {
+      width: 50px;
+      margin-right: 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      color:white;
+      color: white;
       background-color: #000;
       cursor: pointer;
     }
-    .brand{
+
+    .brand {
       display: inline-block;
     }
 
@@ -537,10 +70,10 @@
       flex-direction: column;
       align-items: center;
       min-width: 18%;
-      width:auto;
+      width: auto;
       background-color: #1f91a5;
       color: white;
-      transition : 0.5s;
+      transition: 0.5s;
     }
 
     .side-bar-collapsed {
@@ -552,12 +85,12 @@
       min-width: var(--nav-icon-width);
       background-color: #1f91a5;
       color: white;
-      transition : 0.5s;
+      transition: 0.5s;
       /* padding: 10px 15px 10px 15px; */
     }
 
     .side-bar .nav-title {
-      margin:auto;
+      margin: auto;
       text-align: center;
       width: 90%;
       height: 70px;
@@ -565,7 +98,7 @@
     }
 
     .side-bar-collapsed .nav-title {
-      margin:auto;
+      margin: auto;
       text-align: center;
       height: 50px;
       width: 90%;
@@ -657,26 +190,27 @@
       padding: 0px 0px;
       height: 100%;
     }
-    .main-wrapper{
+
+    .main-wrapper {
       display: flex;
       flex-direction: row;
-      padding-left:0px;
+      padding-left: 0px;
     }
 
     .label-icon {
       display: none;
-    } 
-    #hamburger-menu{
-      display:none;
-      position:absolute;
+    }
+
+    #hamburger-menu {
+      display: none;
+      position: absolute;
       /* z-index: 1; */
-    }  
+    }
+
     .side-bar .label-icon {
       display: block;
       transition: 0.5s;
-    } 
-  
-
+    }
   </style>
 
 </head>
@@ -690,32 +224,26 @@
       <div class="nav-bar">
         <div class="nav-item dashboard">
           <div class="icon"><span class="material-icons">
-            dashboard
+              dashboard
             </span></div>
           <span class='label-icon label-lg'>Dashboard</span>
         </div>
-        <div class="nav-item home">
-          <div class="icon"><span class="material-icons">
-            home
-            </span></div>
-          <span class='label-icon label-lg'>Home</span>
-        </div>
         <div class="nav-item posted-jobs">
           <div class="icon"><span class="material-icons">
-            work
+              work
             </span></div>
           <span class='label-icon label-lg'>Posted Jobs</span>
         </div>
         <div class="nav-item Previously-posted-jobs">
           <div class="icon"><span class="material-icons">
-            dynamic_feed
+              dynamic_feed
             </span></div>
           <span class='label-icon label-lg'>Previously Posted Jobs</span>
         </div>
         <div class="nav-item hr">
           <div class="icon"><span class="material-icons">
-            people
-          </span></div>
+              people
+            </span></div>
           <span class='label-icon label-lg'>HR</span>
         </div>
       </div>
@@ -727,7 +255,7 @@
         </div>
         <div class="container-fluid brand">
           <a class="navbar-brand" href="#"
-              style="font-family:Comic Sans MS, Comic Sans, cursive;color: #15b6e7!important;">C-IT<span
+            style="font-family:Comic Sans MS, Comic Sans, cursive;color: #15b6e7!important;">C-IT<span
               style="color: #fafafa!important;">HUB</span>
           </a>
         </div>
@@ -740,50 +268,49 @@
           <div class="nav-bar">
             <div class="nav-item dashboard">
               <div class="icon"><span class="material-icons">
-                dashboard
+                  dashboard
                 </span></div>
               <span class='label-icon'>Dashboard</span>
             </div>
-            <div class="nav-item home">
-              <div class="icon"><span class="material-icons">
-                home
-                </span></div>
-              <span class='label-icon'>Home</span>
-            </div>
             <div class="nav-item posted-jobs">
               <div class="icon"><span class="material-icons">
-                work
+                  work
                 </span></div>
               <span class='label-icon'>Post a Job</span>
             </div>
             <div class="nav-item Previously-posted-jobs">
               <div class="icon"><span class="material-icons">
-                dynamic_feed
+                  dynamic_feed
                 </span></div>
               <span class='label-icon'>Previously Posted Jobs</span>
             </div>
             <div class="nav-item hr">
               <div class="icon"><span class="material-icons">
-                people
-              </span></div>
+                  people
+                </span></div>
               <span class='label-icon label'>HR</span>
             </div>
           </div>
         </div>
-        <div class="container">
-          <table class="table ">
+        <div class="container" style="margin-top:2rem; background-color:rgba(255, 255, 255, 0);">
+          <table class="table  table-hover list-table"
+            style="font-size:1em; background-color:white;box-shadow: 0 0 5px 2px grey;">
             <thead>
               <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Resume</th>
-                <th scope="col">Status</th>
+                <td scope="col">Name</td>
+                <td scope="col">Resume</td>
+                <td scope="col">Status</td>
               </tr>
             </thead>
             <tbody>
               <tr id="fullhide">
                 <td>ABC</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
+                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-sm">View
+                    Resume</button>
+                  <span class="material-icons resume-icon">
+                    article
+                  </span>
+                </td>
                 <td>
                   <div class="dropdown dropright">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -802,8 +329,12 @@
               <tr>
               <tr id="fullhide1">
                 <td>XYZ</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
+                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-sm">View
+                    Resume</button>
+                  <span class="material-icons resume-icon">
+                    article
+                  </span>
+                </td>
                 <td>
                   <div class="dropdown dropright">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -822,8 +353,12 @@
               <tr>
               <tr id="fullhide2">
                 <td>UZI</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
+                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-sm">View
+                    Resume</button>
+                  <span class="material-icons resume-icon">
+                    article
+                  </span>
+                </td>
                 <td>
                   <div class="dropdown dropright">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -842,8 +377,12 @@
               <tr>
               <tr id="fullhide3">
                 <td>AKM</td>
-                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-lg">View
-                    Resume</button></td>
+                <td><button style="background-color: #1e8293;" type="button" class="btn btn-primary btn-sm">View
+                    Resume</button>
+                  <span class="material-icons resume-icon">
+                    article
+                  </span>
+                </td>
                 <td>
                   <div class="dropdown dropright">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -916,94 +455,94 @@
     var show = false;
     const wrapper = document.querySelector(".wrapper");
     var main = wrapper.querySelector('.main');
-    var hamburger=document.getElementById("hamburger-menu");
+    var hamburger = document.getElementById("hamburger-menu");
     var sideBar = wrapper.querySelector(".side-menu");
     var title = sideBar.querySelector(".nav-title");
     var navbar = sideBar.querySelector(".nav-bar");
     var label = document.querySelector('.label-lg');
-    var toggle=document.querySelector(".menu-icon");
-    var icontoggle=document.querySelector(".icon-toggle");
-   //definition of an observer
-   const resize_ob = new ResizeObserver(function(entries) {
+    var toggle = document.querySelector(".menu-icon");
+    var icontoggle = document.querySelector(".icon-toggle");
+    //definition of an observer
+    const resize_ob = new ResizeObserver(function (entries) {
       // since we are observing only a single element, so we access the first element in entries array
       let rect = entries[0].contentRect;
       // current width & height
       let width = rect.width;
       let height = rect.height;
-     
-      if (parseInt(width,10) <= 992){
-            icontoggle.style.display="flex";
-            sideBar.style.display="none";
-            toggle.classList.add("icon-toggle");
-      }else{
+
+      if (parseInt(width, 10) <= 992) {
+        icontoggle.style.display = "flex";
+        sideBar.style.display = "none";
+        toggle.classList.add("icon-toggle");
+      } else {
         toggle.classList.remove("icon-toggle");
-        icontoggle.style.display="none";
-        hamburger.style.display="none";
-        show=false;
-        sideBar.style.display="block";
+        icontoggle.style.display = "none";
+        hamburger.style.display = "none";
+        show = false;
+        sideBar.style.display = "block";
         toggle.classList.add("icon-toggle");
         sideBar.onmouseover = (e) => {
-            e.preventDefault();
-            sideBar.classList.remove("side-bar-collapsed");
-            sideBar.classList.add("side-bar");
-            /* label.classList.add("label-icon"); */
-          }
+          e.preventDefault();
+          sideBar.classList.remove("side-bar-collapsed");
+          sideBar.classList.add("side-bar");
+          /* label.classList.add("label-icon"); */
+        }
         sideBar.onmouseout = (e) => {
-            e.preventDefault();
-            sideBar.classList.add("side-bar-collapsed");
-            sideBar.classList.remove("side-bar");
-           /*  label.classList.remove("label-icon"); */
-          }
+          e.preventDefault();
+          sideBar.classList.add("side-bar-collapsed");
+          sideBar.classList.remove("side-bar");
+          /*  label.classList.remove("label-icon"); */
+        }
       }
-  });
-  resize_ob.observe(wrapper);
+    });
+    resize_ob.observe(wrapper);
 
-  toggle.addEventListener("click",()=>{
-    if(show){
-      hamburger.style.display="none";
-      hamburger.style.zIndex="1";
-      hamburger.style.transition="0.5s";
-      show=false;
-    }else{
-      hamburger.style.display="block";
-      hamburger.style.transition="0.5s";
-      show=true;
-    }
+    toggle.addEventListener("click", () => {
+      if (show) {
+        hamburger.style.display = "none";
+        hamburger.style.zIndex = "1";
+        hamburger.style.transition = "0.5s";
+        show = false;
+      } else {
+        hamburger.style.display = "block";
+        hamburger.style.transition = "0.5s";
+        show = true;
+      }
 
-  });
+    });
   </script>
   <script>
-    var dashboard=document.getElementsByClassName("dashboard");
-    var home=document.getElementsByClassName("home");
-    var postedJobs=document.getElementsByClassName("posted-jobs");
-    var prPostedJobs=document.getElementsByClassName("Previously-posted-jobs");
-    var hr=document.getElementsByClassName("hr");
-    
-     for(d of dashboard){
-      d.addEventListener("click",()=>{
-      window.location.href="finalproject.html";
-    });
-     }
-     for(h of home){
-      h.addEventListener("click",()=>{
-      window.location.href="#";
-    });
-     }
-     for(p of postedJobs){
-      p.addEventListener("click",()=>{
-      window.location.href="/";
-    });
-     }
-     for(pr of prPostedJobs){
-      pr.addEventListener("click",()=>{
-      window.location.href="/";
-    });
-     }
-     for(r of hr){
-      r.addEventListener("click",()=>{
-      window.location.href="/";
-    });
-     }
+    var dashboard = document.getElementsByClassName("dashboard");
+    var home = document.getElementsByClassName("home");
+    var postedJobs = document.getElementsByClassName("posted-jobs");
+    var prPostedJobs = document.getElementsByClassName("Previously-posted-jobs");
+    var hr = document.getElementsByClassName("hr");
+
+    for (d of dashboard) {
+      d.addEventListener("click", () => {
+        window.location.href = "finalproject.html";
+      });
+    }
+    for (h of home) {
+      h.addEventListener("click", () => {
+        window.location.href = "#";
+      });
+    }
+    for (p of postedJobs) {
+      p.addEventListener("click", () => {
+        window.location.href = "/";
+      });
+    }
+    for (pr of prPostedJobs) {
+      pr.addEventListener("click", () => {
+        window.location.href = "/";
+      });
+    }
+    for (r of hr) {
+      r.addEventListener("click", () => {
+        window.location.href = "/";
+      });
+    }
   </script>
   <script type="text/javascript">
     function showDiv(x) {
@@ -1095,5 +634,4 @@
   </script>
 </body>
 
->>>>>>> dacf63e5538fd8ef6c307dc481cddb74fb384f91
 </html>
