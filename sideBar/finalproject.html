@@ -71,7 +71,7 @@
       align-items: center;
       min-width: 18%;
       width: auto;
-      background-color: #1f91a5;
+      background-color: #34a3be;
       color: white;
       transition: 0.5s;
     }
@@ -84,31 +84,33 @@
       align-items: center;
       width: var(--nav-icon-width);
       overflow-x: hidden;
-      background-color: #1f91a5;
+      background-color: #34a3be;
       color: white;
       transition: 0.5s;
       /* padding: 10px 15px 10px 15px; */
     }
 
-    .side-bar .nav-title.brand-name {
+    .side-bar .brand-name {
       font-size: 1.15em;
       font-weight: 900;
+    }
+
+    .side-bar .admin-name {
+      font-size: 1.09em;
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .side-bar p {
+      margin-bottom: 0px;
+    }
+
+    .side-bar .nav-title {
       margin: auto;
       text-align: center;
       vertical-align: middle;
-      width: 90%;
-      height: 50px;
-      border-bottom: 2px solid whitesmoke;
-      transition: 0.3s;
-    }
-
-    .side-bar .nav-title.admin-name {
-      font-size: 1.09em;
-      font-weight: 300;
-      margin: auto;
-      margin-bottom: 10px;
-      text-align: center;
-      padding-bottom: 0px;
       width: 90%;
       height: 50px;
       border-bottom: 2px solid whitesmoke;
@@ -131,7 +133,7 @@
       margin: auto;
       width: 90%;
       height: 80%;
-      transform: width 0.4s;
+      transition: 0.4s;
     }
 
     .side-bar-collapsed .nav-bar {
@@ -140,7 +142,7 @@
       margin: auto;
       width: 90%;
       height: 80%;
-      transform: width 0.4s;
+      transition: 0.4s;
       flex-shrink: 0;
     }
 
@@ -169,7 +171,7 @@
       margin: auto;
       width: 90%;
       text-align: left;
-      margin: 20px auto;
+      margin: 10px auto;
       color: rgba(255, 255, 255, 0.8);
       border-bottom: 1px solid whitesmoke;
       cursor: pointer;
@@ -247,7 +249,7 @@
     table .material-icons:hover {
       font-size: 36px;
       cursor: pointer;
-      color: #1e8293;
+      color: #34a3be;
     }
 
     table .material-icons:focus {
@@ -266,6 +268,39 @@
       width: 100%;
       margin: auto;
     }
+
+    .dropdown-menu {
+      background-color: #34a3be;
+      padding: 0px 0px 0px 0px;
+      border-radius: 5px;
+    }
+
+    .dropdown-menu ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding: 0px 0px 0px 0px;
+    }
+
+    .dropdown-menu ul:last-child {
+      color: white;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+    .dropdown-menu ul li {
+      color: white;
+      width: 100%;
+
+    }
+
+
+    .dropdown-menu ul li:hover {
+      background-color: #2b8aa1;
+      color: white;
+      cursor: pointer;
+    }
   </style>
 
 </head>
@@ -274,10 +309,10 @@
   <div class="wrapper">
     <div class="side-bar-collapsed side-menu">
       <div class="nav-title brand-name">
-        Career-IT Hub
+        <p>Career-IT Hub</p>
       </div>
       <div class="nav-title admin-name">
-        ADMIN NAME
+        <p>ADMIN NAME</p>
       </div>
       <div class="nav-bar">
         <div class="nav-item dashboard">
@@ -286,23 +321,53 @@
             </span></div>
           <span class='label-icon label-lg'>Dashboard</span>
         </div>
-        <div class="nav-item posted-jobs">
+        <div class="nav-item profile">
           <div class="icon"><span class="material-icons">
-              work
+              person
             </span></div>
-          <span class='label-icon label-lg'>Post a Job</span>
+          <span class='label-icon label-lg'>Profile</span>
         </div>
-        <div class="nav-item Previously-posted-jobs">
+        <div class="nav-item mail">
           <div class="icon"><span class="material-icons">
-              dynamic_feed
+              email
             </span></div>
-          <span class='label-icon label-lg'>Previously Posted Jobs</span>
+          <span class='label-icon label-lg'>Messages</span>
         </div>
-        <div class="nav-item hr">
+        <div class="nav-item shop">
           <div class="icon"><span class="material-icons">
-              people
+              shopping_cart
             </span></div>
-          <span class='label-icon label-lg'>HR</span>
+          <span class='label-icon label-lg'>Sales</span>
+        </div>
+        <div class="nav-item analytic">
+          <div class="icon"><span class="material-icons">
+              trending_up
+            </span></div>
+          <span class='label-icon label-lg'>Analytics</span>
+        </div>
+        <div class="nav-item chart">
+          <div class="icon"><span class="material-icons">
+              insert_chart
+            </span></div>
+          <span class='label-icon label-lg'>Charts</span>
+        </div>
+        <div class="nav-item tab">
+          <div class="icon"><span class="material-icons">
+              table_chart
+            </span></div>
+          <span class='label-icon label-lg'>Tables</span>
+        </div>
+        <div class="nav-item conf">
+          <div class="icon"><span class="material-icons">
+              settings
+            </span></div>
+          <span class='label-icon label-lg'>settings</span>
+        </div>
+        <div class="nav-item desc">
+          <div class="icon"><span class="material-icons">
+              description
+            </span></div>
+          <span class='label-icon label-lg'>Documentation</span>
         </div>
       </div>
     </div>
@@ -321,35 +386,65 @@
       <div class="container-fluid main-wrapper" style="background: rgb(255, 255, 255); height: 100vh;">
         <div class="side-bar" id="hamburger-menu">
           <div class="nav-title brand-name">
-            <h4>Career-IT Hub</h4>
+            <p>Career-IT Hub</p>
           </div>
           <div class="nav-title admin-name">
-            <h4>ADMIN NAME</h4>
+            <p>ADMIN NAME</p>
           </div>
           <div class="nav-bar">
             <div class="nav-item dashboard">
               <div class="icon"><span class="material-icons">
                   dashboard
                 </span></div>
-              <span class='label-icon'>Dashboard</span>
+              <span class='label-icon label-lg'>Dashboard</span>
             </div>
-            <div class="nav-item posted-jobs">
+            <div class="nav-item profile">
               <div class="icon"><span class="material-icons">
-                  work
+                  person
                 </span></div>
-              <span class='label-icon'>Post a Job</span>
+              <span class='label-icon label-lg'>Profile</span>
             </div>
-            <div class="nav-item Previously-posted-jobs">
+            <div class="nav-item mail">
               <div class="icon"><span class="material-icons">
-                  dynamic_feed
+                  email
                 </span></div>
-              <span class='label-icon'>Previously Posted Jobs</span>
+              <span class='label-icon label-lg'>Messages</span>
             </div>
-            <div class="nav-item hr">
+            <div class="nav-item shop">
               <div class="icon"><span class="material-icons">
-                  people
+                  shopping_cart
                 </span></div>
-              <span class='label-icon label'>HR</span>
+              <span class='label-icon label-lg'>Sales</span>
+            </div>
+            <div class="nav-item analytic">
+              <div class="icon"><span class="material-icons">
+                  trending_up
+                </span></div>
+              <span class='label-icon label-lg'>Analytics</span>
+            </div>
+            <div class="nav-item chart">
+              <div class="icon"><span class="material-icons">
+                  insert_chart
+                </span></div>
+              <span class='label-icon label-lg'>Charts</span>
+            </div>
+            <div class="nav-item tab">
+              <div class="icon"><span class="material-icons">
+                  table_chart
+                </span></div>
+              <span class='label-icon label-lg'>Tables</span>
+            </div>
+            <div class="nav-item conf">
+              <div class="icon"><span class="material-icons">
+                  settings
+                </span></div>
+              <span class='label-icon label-lg'>settings</span>
+            </div>
+            <div class="nav-item desc">
+              <div class="icon"><span class="material-icons">
+                  description
+                </span></div>
+              <span class='label-icon label-lg'>Documentation</span>
             </div>
           </div>
         </div>
@@ -380,7 +475,7 @@
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                       Status
                     </button>
-                    <div class="dropdown-menu" style="background: #1e8293;">
+                    <div class="dropdown-menu">
                       <ul>
                         <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
                         <li class="dropdown-item" onclick="reject(this)">Reject</li>
@@ -410,7 +505,7 @@
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                       Status
                     </button>
-                    <div class="dropdown-menu" style="background: #1e8293;">
+                    <div class="dropdown-menu">
                       <ul>
                         <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
                         <li class="dropdown-item" onclick="reject(this)">Reject</li>
@@ -440,7 +535,7 @@
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                       Status
                     </button>
-                    <div class="dropdown-menu" style="background: #1e8293;">
+                    <div class="dropdown-menu">
                       <ul>
                         <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
                         <li class="dropdown-item" onclick="reject(this)">Reject</li>
@@ -469,7 +564,7 @@
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                       Status
                     </button>
-                    <div class="dropdown-menu" style="background: #1e8293;">
+                    <div class="dropdown-menu">
                       <ul>
                         <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
                         <li class="dropdown-item" onclick="reject(this)">Reject</li>
@@ -532,13 +627,14 @@
     const wrapper = document.querySelector(".wrapper");
     var main = wrapper.querySelector('.main');
     var hamburger = document.getElementById("hamburger-menu");
+    var hamburgerItems = document.getElementsByClassName("nav-item");
     var sideBar = wrapper.querySelector(".side-menu");
     var title = sideBar.querySelector(".nav-title");
     var navbar = sideBar.querySelector(".nav-bar");
     var label = document.querySelector('.label-lg');
     var toggle = document.querySelector(".menu-icon");
     var icontoggle = document.querySelector(".icon-toggle");
-    var mainTable = document.querySelector(".main-table")
+    var mainTable = document.querySelector(".main-table");
     var btnresume = document.getElementsByClassName("resume");
     var resumeIcon = document.getElementsByClassName("icon-resume");
     //definition of an observer
@@ -592,12 +688,17 @@
     toggle.addEventListener("click", () => {
       if (show) {
         hamburger.style.display = "none";
-        hamburger.style.zIndex = "1";
-        hamburger.style.transition = "1.5s";
+        hamburger.style.transition = "0.5s";
         show = false;
       } else {
         hamburger.style.display = "block";
-        hamburger.style.transition = "1.5s";
+        hamburger.style.width = "60vw";
+        hamburger.style.zIndex = "1";
+        hamburger.style.transition = "0.5s";
+        for (let h of hamburgerItems) {
+          h.style.jsutifyContent = "start";
+          h.style.margin = "10px 0px 10px 0px";
+        }
         show = true;
       }
 

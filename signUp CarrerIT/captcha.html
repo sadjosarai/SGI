@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Sign Up</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -51,6 +52,8 @@
             grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
             margin-bottom: 25px;
         }
+
+
 
         .container .login-social a {
             padding: 12px;
@@ -163,9 +166,72 @@
             color: #6c5ce7;
         }
 
+        .input-group input:focus {
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+
+        .btn-submit {
+            width: 100%;
+            margin: auto;
+            height: 50px;
+            background-color: #24417c;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: inset 0px 1px 2px 2px grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            width: 100%;
+            margin: auto;
+            height: 50px;
+            background-color: #1e3666;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: inset 0px 1px 2px 1px grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+        }
+
+        #refresh {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #refresh :hover {
+            cursor: pointer;
+        }
+
+        .form-wrapper form {
+            margin: 10px auto;
+        }
+
+        #captcha {
+            margin-left: 0px;
+            background-color: rgb(44, 44, 44);
+            color: white;
+            height: 100%;
+            width: 70px;
+            padding: 0px 5px 0px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         @media (max-width: 430px) {
             .container {
                 width: 300px;
+                font-size: 1em;
             }
 
             .container .login-social {
@@ -175,72 +241,113 @@
             .container .login-social a {
                 display: block;
             }
+
+            .input-group {
+                padding-right: 5px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="from-wrapper">
-            <form action="" method="POST" class="login-email">
+        <div class="form-wrapper">
+            <form action="/action_page.php" method="POST" class="login-email">
                 <p class="login-text" style="font-size: 2rem; font-weight: 800;">Sign Up</p>
                 <div class="input-group">
-                    <label for="name"><i class="fa fa-user" aria-hidden="true"></i></label>
-                    <input type="text" placeholder="Name" name="Name" required>
+                    <label for="fname"><span class="material-icons">
+                            person
+                        </span></label>
+                    <input type="text" placeholder="Name" name="fname" required>
                 </div>
                 <div class="input-group">
-                    <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i></label>
+                    <label for="lname"><span class="material-icons">
+                            person
+                        </span></label>
+                    <input type="text" placeholder="Last name" name="lname" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"></i><span class="material-icons">
+                            email
+                        </span></label>
                     <input type="email" placeholder="Email" name="Email" required>
                 </div>
                 <div class="input-group">
-                    <label for="company-name"><i class="fa fa-building" aria-hidden="true"></i></label>
-                    <input type="text" placeholder="Company-name" name="ccname" required>
+                    <label for="cname"></i><span class="material-icons">
+                            business
+                        </span></label>
+                    <input type="text" placeholder="Company-name" name="cname" required>
                 </div>
                 <div class="input-group">
-                    <label for="email"><i class="fa fa-id-card" aria-hidden="true"></i></label>
-                    <input type="text" placeholder="Company id" name="cid" required>
+                    <label for="address"></i><span class="material-icons">
+                            import_contacts
+                        </span></label>
+                    <input type="text" placeholder="Company Adress" name="address" required>
                 </div>
                 <div class="input-group">
-                    <label for="email"><i class="fa fa-id-card" aria-hidden="true"></i></label>
-                    <input type="text" placeholder=" Company pan card" name="cpancard" required>
-                </div>
-                <div class="input-group">
-                    <label for="email"><i class="fa fa-balance-scale" aria-hidden="true"></i></label>
-                    <input type="incorporation number" placeholder="Incorporation number" name="incorporation number"
+                    <label for="incorporation-number"><span class="material-icons">
+                            money
+                        </span></label>
+                    <input type="incorporation number" placeholder="Incorporation number" name="incorporation-number"
                         required>
                 </div>
                 <div class="input-group">
-                    <label for="pass"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                    <label for="cid"><span class="material-icons">
+                            badge
+                        </span></label>
+                    <input type="incorporation number" placeholder="Company Id" name="cid" required>
+                </div>
+                <div class="input-group">
+                    <label for="pancard"></i><span class="material-icons">
+                            payments
+                        </span></label>
+                    <input type="text" placeholder="pan card number" name="pancard" required>
+                </div>
+                <div class="input-group" style="display:block;height:75px;">
+                    <div class="pan-block" style="display:flex;flex-direction: column;">
+                        <label for="panfile" style="margin-left:2.2em;color:rgba(0, 0, 0, 0.5);">upload pan</label>
+                        <input type="file" style="margin-left:1.1em;" name="panfile" id="" text="Pan">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password"><span class="material-icons">
+                            lock
+                        </span></label>
                     <input type="password" placeholder="Password" name="password" required>
                 </div>
                 <div class="input-group">
-                    <label for="pass"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                    <label for="cpassword"></i><span class="material-icons">
+                            lock
+                        </span></label>
                     <input type="password" placeholder="Confirm Password" name="cpassword" required>
                 </div>
-                <div class="input-group">
-                    <div id="captcha">BhKAHF</div>
+                <div class="input-group" style="padding-left:0px;">
+                    <div id="captcha">
+                        BhKAHF
+                    </div>
                     <input type="text" placeholder="enter captcha" id="inputCaptcha" required>
                 </div>
 
-                <div class="descrip">
+                <!--  <div class="descrip">
                     Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB)
                     <span style="float:right;"><a href="">List of supported documents</a>&nbsp;&nbsp;&nbsp;</span>
+                </div> -->
+                <br>
+                <div id="refresh" onclick="refresh()">
+                    <p>click here to refresh</p><span class="material-icons"
+                        style="color:rgb(6, 158, 6);">autorenew</span>
                 </div>
-                <br><br>
-                <span style="margin-left:100px"></span> Pan Card<sup style="color:rgb(255, 8, 8)"> * </sup>
                 <br>
-                <span style="margin-left:100px"></span><input type="file" name="" id="">
-                <br>
-                <span style="margin-left:100px"></span> Company Certificate<sup style="color:rgb(255, 8, 8)"> * </sup>
+                <!-- <span style="margin-left:100px"></span> Company Certificate<sup style="color:rgb(255, 8, 8)"> * </sup>
                 <br>
                 <span style="margin-left:100px"></span><input type="file" name=""
-                    id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:100px">
-
-
-                    <div class="input-group">
-                        <button id="submit" class="btn">Register</button>
-                    </div>
+                    id="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:100px"> -->
+                <div class="btn-submit" id="submit">
+                    Register
+                </div>
+                <div style="display:flex;justify-content:center;align-items:center;">
                     <p class="login-register-text">Have an account? <a href="login.html">Login Here</a>.</p>
+                </div>
             </form>
         </div>
         <div class="log-image">
@@ -248,6 +355,8 @@
         </div>
     </div>
     <script>
+        var inputCapcha = document.getElementById("captcha");
+
         var allvalue = ['A', 'B', 'C', 'B', 'A', 'F', 'A', 'B', 'A', 'B', 'Q', 'B', 'A',
             'c', 'A', 'B', 'A', 'B', 'x', 'B', 'A', 'y', 'z', 'B', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
@@ -260,12 +369,29 @@
 
         var cValue = cVal1 + cVal2 + cVal3 + cVal4 + cVal5 + cVal6;
 
-        document.getElementById("captcha").innerHTML = cValue;
+        inputCapcha.innerHTML = cValue;
+        function refresh() {
+            var cVal1 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal2 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal3 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal4 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal5 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal6 = allvalue[Math.floor(Math.random() * allvalue.length)];
+
+            var cValue = cVal1 + cVal2 + cVal3 + cVal4 + cVal5 + cVal6; var cVal1 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal2 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal3 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal4 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal5 = allvalue[Math.floor(Math.random() * allvalue.length)];
+            var cVal6 = allvalue[Math.floor(Math.random() * allvalue.length)];
+
+            var cValue = cVal1 + cVal2 + cVal3 + cVal4 + cVal5 + cVal6;
+            inputCapcha.innerHTML = cValue;
+        }
 
         var thisValue = "";
-        var inputCapcha = document.getElementById("inputCaptcha");
         var submitbtn = document.getElementById("submit");
-
+        var ref = document.getElementById("refresh");
         inputCapcha.addEventListener('change', function () {
             thisValue = inputCapcha.value;
             // alert(thisValue)
@@ -276,12 +402,10 @@
                 document.logForm.submit();
             } else if (inputCapcha.value == "") {
                 alert('Invalid Capcha');
-
             } else {
                 alert('Invalid Capcha');
-
             }
-        })
+        });
     </script>
 </body>
 

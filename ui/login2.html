@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Login Form</title>
+      <link rel="stylesheet" href="style2.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+   </head>
+   <body>
+      <div class="center">
+         <div class="header">
+            Login
+         </div>
+         <form>
+            <input type="text" placeholder="Email">
+            <i class="far fa-envelope"></i>
+            <input id="pswrd" type="password" placeholder="Password">
+            <i class="fas fa-lock" onclick="show()"></i>
+            <input type="submit" value="Log In">
+            <a href="forgotpassword.html">Forgot Password?</a>
+            <p class="para-2">
+                Not have an account? <a href="signup.html">Sign Up Here</a>
+              </p>
+         </form>
+      </div>
+      <script>
+         function show(){
+          var pswrd = document.getElementById('pswrd');
+          var icon = document.querySelector('.fas');
+          if (pswrd.type === "password") {
+           pswrd.type = "text";
+           pswrd.style.marginTop = "20px";
+           icon.style.color = "#1877f2";
+          }else{
+           pswrd.type = "password";
+           icon.style.color = "black";
+          }
+         }
+      </script>
+   </body>
+</html>
