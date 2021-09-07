@@ -14,18 +14,12 @@
 
 	<!------bootstrap css----->
 
-	<link rel="stylesheet" href="" https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
 		integrity="sha384-r4NyP46KrjDl eawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJ4I" crossoringin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!---<link rel="stylesheet" type="text/css" href="css/style.css"> --->
 	<link rel="stylesheet" href="style.css" type="text/css">
-
-
-
-
-</head>
-
-<body>
 	<style>
 		* {
 			margin: 0;
@@ -99,10 +93,13 @@
 			margin-top: -7%;
 		}
 
-		div.main {
+		.main {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			width: 400px;
 			height: auto;
-			margin: 30px auto 0px auto;
+			margin: 10px auto 10px auto;
 
 		}
 
@@ -120,7 +117,7 @@
 			border: 1px solid rgba(255, 255, 255, 0.3);
 			box-shadow: 2px 2px 15px rgb(0, 0, 0, 0.3);
 			color: black;
-			margin-top: 60px;
+			margin-top: 20px;
 			height: auto;
 
 		}
@@ -202,14 +199,41 @@
 			background-color: red;
 		}
 
-		/* label,
-		span,
-		h2 {
-			 ! ! ! !text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+		.backward {
+			font-size: 1.2em;
+			font-weight: 800;
+			display: flex;
+			flex-direction: row;
+			justify-content: left;
+			align-items: center;
+			color: rgb(22, 78, 116);
+			width: 25%;
+		}
 
-		} */
+		.backward:hover {
+			width: 25%;
+			font-size: 1.2em;
+			font-weight: 800;
+			text-shadow: 1px 3px 4px rgb(173, 183, 240);
+			cursor: pointer;
+			display: flex;
+			flex-direction: row;
+			justify-content: left;
+			align-items: center;
+			color: rgb(15, 55, 82);
+		}
 	</style>
+</head>
+
+<body>
+
 	<div class="main">
+		<div class="backward">
+			<span class="material-icons" style="margin-right:5px;">
+				first_page
+			</span>
+			<p>Go back</p>
+		</div>
 		<div class="register">
 			<h2>Application Form</h2>
 			<form id="register" method="post">
