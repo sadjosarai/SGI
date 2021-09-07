@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        :root {
+            --nav-icon-width: 55px;
+        }
+
+        body {
+            margin: 0px 0px;
+            padding: 0px 0px 0px 0px;
+            font-size: 1em;
+            background-color: #ffffff;
+        }
+
+        .navbar-inverse .navbar-brand:hover {
+            color: #fff;
+            background-color: transparent;
+        }
+
+        .wrapper {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .icon-toggle {
+            width: 50px;
+            margin-right: 1rem;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-toggle:hover {
+            width: 50px;
+            margin-right: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: #000;
+            cursor: pointer;
+        }
+
+        .brand {
+            display: inline-block;
+        }
+
+        .side-bar {
+            padding-top: 10px;
+            height: 100%;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 18%;
+            width: auto;
+            background-color: #2e4e8c;
+            color: white;
+            transition: 0.4s;
+        }
+
+        .side-bar-collapsed {
+            padding-top: 10px;
+            height: 100%;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            width: var(--nav-icon-width);
+            overflow-x: hidden;
+            background-color: #2e4e8c;
+            color: white;
+            transition: 0.4s;
+        }
+
+        .side-bar .brand-name {
+            font-size: 1.15em;
+            font-weight: 900;
+        }
+
+        .side-bar .admin-name {
+            font-size: 1.09em;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .side-bar p {
+            margin-bottom: 0px;
+        }
+
+        .side-bar .nav-title {
+            margin: auto;
+            text-align: center;
+            vertical-align: middle;
+            width: 90%;
+            height: 50px;
+            border-bottom: 2px solid whitesmoke;
+            transition: 0.3s;
+        }
+
+        .side-bar-collapsed .nav-title {
+            margin-left: 60px;
+            text-align: center;
+            height: 50px;
+            width: 90%;
+            border-bottom: 2px solid whitesmoke;
+            transition: 0.3s;
+        }
+
+        .side-bar .nav-bar {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 90%;
+            height: 80%;
+            transition: 0.4s;
+        }
+
+        .side-bar-collapsed .nav-bar {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 100%;
+            height: 80%;
+            transition: 0.4s;
+            flex-shrink: 0;
+        }
+
+        .side-bar .nav-bar .nav-item {
+            padding-bottom: 8px;
+            padding-top: 8px;
+            margin: 10px auto;
+            width: 90%;
+            text-align: left;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .side-bar-collapsed .nav-bar .nav-item {
+            padding-bottom: 8px;
+            padding-top: 8px;
+            margin: auto;
+            width: 100%;
+            text-align: left;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .side-bar .nav-bar .nav-item:hover {
+            padding-bottom: 8px;
+            padding-top: 8px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: left;
+            margin: 10px auto;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            background-color: #00020c;
+            transition: all 0.5s;
+            align-items: center;
+        }
+
+        .side-bar-collapsed .nav-bar .nav-item:hover {
+            padding-bottom: 8px;
+            padding-top: 8px;
+            width: 100%;
+            text-align: left;
+            margin: 10px auto;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .side-bar .nav-bar .nav-item .icon {
+            margin-right: 5px;
+            padding-left: 5px;
+            width: var(--nav-icon-width);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .side-bar-collapsed .nav-bar .nav-item .icon {
+            margin-right: 5px;
+            padding-left: 5px;
+            width: var(--nav-icon-width);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            padding: 0px 0px;
+            height: 100%;
+        }
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: row;
+            padding-left: 0px;
+        }
+
+        .label-icon {
+            display: none;
+        }
+
+        #hamburger-menu {
+            display: none;
+            position: absolute;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .side-bar .label-icon {
+            display: block;
+            transition: 0.5s;
+        }
+
+        .icon-resume {
+            display: none;
+            justify-content: center;
+            padding-left: 0.8em;
+            margin: auto;
+        }
+
+        table .material-icons {
+            font-size: 36px;
+        }
+
+        table .material-icons:hover {
+            font-size: 36px;
+            cursor: pointer;
+            color: #2e4e8c;
+        }
+
+        table .material-icons:focus {
+            font-size: 34px;
+            cursor: pointer;
+        }
+
+        table {
+            font-size: 1em;
+            background-color: white;
+            box-shadow: 0 0 3px 1px grey;
+            margin: auto;
+        }
+
+        .table-list-container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .dropdown-menu {
+            background-color: #2e4e8c;
+            padding: 0px 0px 0px 0px;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .dropdown-menu ul:last-child {
+            color: white;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .dropdown-menu ul li {
+            color: white;
+            width: 100%;
+
+        }
+
+
+        .dropdown-menu ul li:hover {
+            background-color: #233d72;
+            color: white;
+            cursor: pointer;
+        }
+
+        .side-bar-collapsed .current {
+            background-color: #040c1b;
+            width: 100%;
+            box-shadow: 2px 5px 20px #111;
+            transition: all .4s;
+        }
+
+        .side-bar .current {
+            background-color: #2e4e8c;
+            border-radius: 7px;
+            box-shadow: 2px 5px 20px #111;
+            transition: all .4s;
+        }
+
+        .side-bar .current:hover {
+            background: #2e4e8c;
+            border-radius: 7px;
+            box-shadow: 2px 5px 20px #111;
+            transform: translateY(-1px);
+        }
+    </style>
+
+</head>
+
+<body style="background-color:rgb(253, 253, 253)">
+    <div class="wrapper">
+        <div class="side-bar-collapsed side-menu">
+            <div class="nav-title brand-name">
+                <p>Career-IT Hub</p>
+            </div>
+            <div class="nav-title admin-name">
+                <p>ADMIN NAME</p>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-item home current">
+                    <div class="icon"><span class="material-icons">
+                            home
+                        </span></div>
+                    <span class='label-icon label-lg'>Dashboard</span>
+                </div>
+                <div class="nav-item job">
+                    <div class="icon"><span class="material-icons">
+                            work
+                        </span></div>
+                    <span class='label-icon label-lg'>Post a Job</span>
+                </div>
+                <div class="nav-item feed">
+                    <div class="icon"><span class="material-icons">
+                            dynamic_feed
+                        </span></div>
+                    <span class='label-icon label-lg'>Previously Posted Job</span>
+                </div>
+                <div class="nav-item group">
+                    <div class="icon"><span class="material-icons">
+                            group
+                        </span></div>
+                    <span class='label-icon label-lg'>HR</span>
+                </div>
+            </div>
+        </div>
+        <div class="main container-fluid">
+            <nav class="nav-container container-fluid" style="background-color: #000107!important;">
+                <div class="icon-toggle menu-icon">
+                    <span class="material-icons">menu</span>
+                </div>
+                <div class="container-fluid brand">
+                    <a class="navbar-brand" href="#"
+                        style="font-family:Comic Sans MS, Comic Sans, cursive;color: #15b6e7!important;">C-IT<span
+                            style="color: #fafafa!important;">HUB</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="container-fluid main-wrapper" style="background: rgb(255, 255, 255); height: 100vh;">
+                <div class="side-bar" id="hamburger-menu">
+                    <div class="nav-title brand-name">
+                        <p>Career-IT Hub</p>
+                    </div>
+                    <div class="nav-title admin-name">
+                        <p>ADMIN NAME</p>
+                    </div>
+                    <div class="nav-bar">
+                        <div class="nav-item home current">
+                            <div class="icon"><span class="material-icons">
+                                    home
+                                </span></div>
+                            <span class='label-icon label-lg'>Dashboard</span>
+                        </div>
+                        <div class="nav-item job">
+                            <div class="icon"><span class="material-icons">
+                                    work
+                                </span></div>
+                            <span class='label-icon label-lg'>Post a Job</span>
+                        </div>
+                        <div class="nav-item feed">
+                            <div class="icon"><span class="material-icons">
+                                    dynamic_feed
+                                </span></div>
+                            <span class='label-icon label-lg'>Previously Posted Job</span>
+                        </div>
+                        <div class="nav-item group">
+                            <div class="icon"><span class="material-icons">
+                                    group
+                                </span></div>
+                            <span class='label-icon label-lg'>HR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid tables-wrapper"
+                    style="margin-top:2rem; background-color:rgba(255, 255, 255, 0);">
+                    <table class="table table-hover main-table">
+                        <thead>
+                            <tr>
+                                <th scope="col"><b>Name</b></th>
+                                <th scope="col"><b>Resume</b></th>
+                                <th scope="col"><b>Status</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="fullhide">
+                                <td>SAMANTHA E. COnnor</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="fullhide1">
+                                <td>SECOND NAME WTF</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="fullhide2">
+                                <td>AFTOMATICA KALASHNIKOVA</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </tr>
+                            <tr id="fullhide3">
+                                <td>AMRAN BEN OUSMANI</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 table-list-container">
+                            <table class="table table-hover shortlisted-employee" style="text-align: center;">
+                                <thead>
+                                    <tr>
+                                        <th><b>Short Listed Employee</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-12 col-sm-12 table-list-container" style="text-align: center;">
+                            <table class="table table-hover on-hold-employee">
+                                <thead>
+                                    <tr>
+                                        <th><b>On Hold</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-12 col-sm-12 table-list-container">
+                            <table class="table table-hover next-round-employee" style="text-align: center;">
+                                <thead>
+                                    <tr>
+                                        <th><b>Select For Next Round</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //variable definition
+        var show = false;
+        const wrapper = document.querySelector(".wrapper");
+        var main = wrapper.querySelector('.main');
+        var hamburger = document.getElementById("hamburger-menu");
+        var hamburgerItems = document.getElementsByClassName("nav-item");
+        var sideBar = wrapper.querySelector(".side-menu");
+        var title = sideBar.querySelector(".nav-title");
+        var navbar = sideBar.querySelector(".nav-bar");
+        var label = document.querySelector('.label-lg');
+        var toggle = document.querySelector(".menu-icon");
+        var icontoggle = document.querySelector(".icon-toggle");
+        var mainTable = document.querySelector(".main-table");
+        var btnresume = document.getElementsByClassName("resume");
+        var resumeIcon = document.getElementsByClassName("icon-resume");
+        //definition of an observer
+        const resize_ob = new ResizeObserver(function (entries) {
+            // since we are observing only a single element, so we access the first element in entries array
+            let rect = entries[0].contentRect;
+            // current width & height
+            let width = rect.width;
+            let height = rect.height;
+
+            if (parseInt(width, 10) <= 992) {
+                icontoggle.style.display = "flex";
+                sideBar.style.display = "none";
+                toggle.classList.add("icon-toggle");
+            } else {
+                toggle.classList.remove("icon-toggle");
+                icontoggle.style.display = "none";
+                hamburger.style.display = "none";
+                show = false;
+                sideBar.style.display = "block";
+                toggle.classList.add("icon-toggle");
+                sideBar.onmouseover = (e) => {
+                    e.preventDefault();
+                    sideBar.classList.remove("side-bar-collapsed");
+                    sideBar.classList.add("side-bar");
+                }
+                sideBar.onmouseout = (e) => {
+                    e.preventDefault();
+                    sideBar.classList.add("side-bar-collapsed");
+                    sideBar.classList.remove("side-bar");
+                }
+            }
+            if (parseInt(width, 10) <= 567) {
+                for (let b of btnresume) {
+                    b.style.display = "none";
+                }
+                for (let r of resumeIcon) {
+                    r.style.display = "flex";
+                }
+            } else {
+                for (let b of btnresume) {
+                    b.style.display = "block";
+                }
+                for (let r of resumeIcon) {
+                    r.style.display = "none";
+                }
+            }
+        });
+        resize_ob.observe(wrapper);
+
+        toggle.addEventListener("click", () => {
+            if (show) {
+                hamburger.style.display = "none";
+                hamburger.style.transition = "0.5s";
+                show = false;
+            } else {
+                hamburger.style.display = "block";
+                hamburger.style.width = "60vw";
+                hamburger.style.zIndex = "1";
+                hamburger.style.transition = "0.5s";
+                for (let h of hamburgerItems) {
+                    h.style.jsutifyContent = "start";
+                    h.style.margin = "10px 0px 10px 0px";
+                }
+                show = true;
+            }
+
+        });
+    </script>
+    <script>
+        var dashboard = document.getElementsByClassName("dashboard");
+        var home = document.getElementsByClassName("home");
+        var postedJobs = document.getElementsByClassName("posted-jobs");
+        var prPostedJobs = document.getElementsByClassName("Previously-posted-jobs");
+        var hr = document.getElementsByClassName("hr");
+
+        for (d of dashboard) {
+            d.addEventListener("click", () => {
+                window.location.href = "finalproject.html";
+            });
+        }
+        for (h of home) {
+            h.addEventListener("click", () => {
+                window.location.href = "#";
+            });
+        }
+        for (p of postedJobs) {
+            p.addEventListener("click", () => {
+                window.location.href = "/";
+            });
+        }
+        for (pr of prPostedJobs) {
+            pr.addEventListener("click", () => {
+                window.location.href = "/";
+            });
+        }
+        for (r of hr) {
+            r.addEventListener("click", () => {
+                window.location.href = "/";
+            });
+        }
+    </script>
+    <script>
+        function shortlist(e) {
+            var mainTable = document.querySelector(".main-table");
+            var shortlistedEmployee = document.querySelector(".shortlisted-employee");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var name = mainTable.rows[i].cells[0].innerHTML;
+            var shortlistedEmployeeTableLastRow = shortlistedEmployee.rows.length - 1;
+            let nextRow = shortlistedEmployeeTableLastRow + 1;
+            var ex = false;
+            for (let j = 0; j <= shortlistedEmployeeTableLastRow; j++) {
+                if (shortlistedEmployee.rows[j].cells[0].innerHTML == name) {
+                    ex = true;
+                    break;
+                }
+            }
+            if (ex) {
+                alert("employee already shortlisted");
+            } else {
+                var row = shortlistedEmployee.insertRow(nextRow);
+                var cell = row.insertCell(0);
+                cell.innerHTML = name;
+            }
+        }
+        function onHold(e) {
+            var mainTable = document.querySelector(".main-table");
+            var onHoldEmployee = document.querySelector(".on-hold-employee");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var name = mainTable.rows[i].cells[0].innerHTML;
+            var onHoldEmployeeTableLastRow = onHoldEmployee.rows.length - 1;
+            let nextRow = onHoldEmployeeTableLastRow + 1;
+            var ex = false;
+            for (let j = 0; j <= onHoldEmployeeTableLastRow; j++) {
+                if (onHoldEmployee.rows[j].cells[0].innerHTML == name) {
+                    ex = true;
+                    break;
+                }
+            }
+            if (ex) {
+                alert("employee already on hold");
+            } else {
+                var row = onHoldEmployee.insertRow(nextRow);
+                var cell = row.insertCell(0);
+                cell.innerHTML = name;
+            }
+        }
+        function reject(e) {
+            var mainTable = document.querySelector(".main-table");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var action = confirm("are you sure you want to reject this employee? he will be permanently deleted from the table!");
+            if (action) {
+                mainTable.deleteRow(i);
+            }
+        }
+        function nextRound(e) {
+            var mainTable = document.querySelector(".main-table");
+            var nextRoundEmployee = document.querySelector(".next-round-employee");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var name = mainTable.rows[i].cells[0].innerHTML;
+            var nextRoundEmployeeTableLastRow = nextRoundEmployee.rows.length - 1;
+            let nextRow = nextRoundEmployeeTableLastRow + 1;
+            var ex = false;
+            for (let j = 0; j <= nextRoundEmployeeTableLastRow; j++) {
+                if (nextRoundEmployee.rows[j].cells[0].innerHTML == name) {
+                    ex = true;
+                    break;
+                }
+            }
+            if (ex) {
+                alert("employee already on next round list");
+            } else {
+                var row = nextRoundEmployee.insertRow(nextRow);
+                var cell = row.insertCell(0);
+                cell.innerHTML = name;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
