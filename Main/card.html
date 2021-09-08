@@ -165,7 +165,7 @@
         </div>
         <div class="card-wrapper container-fluid">
           <div class="row">
-            <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
               <div class="card">
                 <div class="image">
                   <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
@@ -180,7 +180,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
               <div class="card">
                 <div class="image">
                   <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
@@ -195,7 +195,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
               <div class="card">
                 <div class="image">
                   <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
@@ -210,7 +210,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
               <div class="card">
                 <div class="image">
                   <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
@@ -225,7 +225,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-12 col-md-6">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
               <div class="card">
                 <div class="image">
                   <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
@@ -250,6 +250,8 @@
     var show = false;
     const wrapper = document.querySelector(".wrapper");
     var main = wrapper.querySelector('.main');
+    var brand = document.querySelector(".brand");
+    var cards = document.querySelector(".card-wrapper");
     var hamburger = document.getElementById("hamburger-menu");
     var hamburgerItems = document.getElementsByClassName("nav-item");
     var sideBar = wrapper.querySelector(".side-menu");
@@ -329,8 +331,10 @@
       if (show) {
         hamburger.style.display = "none";
         hamburger.style.transition = "0.5s";
+        main.style.overflowY = "scroll";
         show = false;
       } else {
+        main.style.overflowY = "unset";
         hamburger.style.display = "block";
         hamburger.style.width = "60vw";
         hamburger.style.zIndex = "1";
@@ -341,7 +345,22 @@
         }
         show = true;
       }
-
+    });
+    brand.addEventListener("click", () => {
+      if (show) {
+        main.style.overflowY = "scroll";
+        hamburger.style.display = "none";
+        hamburger.style.transition = "0.5s";
+        show = false;
+      }
+    });
+    cards.addEventListener("click", () => {
+      if (show) {
+        main.style.overflowY = "scroll";
+        hamburger.style.display = "none";
+        hamburger.style.transition = "0.5s";
+        show = false;
+      }
     });
   </script>
   <script>
