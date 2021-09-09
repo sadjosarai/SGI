@@ -57,10 +57,9 @@
                     <span class="material-icons">menu</span>
                 </div>
                 <div class="container-fluid brand">
-                    <a class="navbar-brand" href="#"
-                        style="font-family:Comic Sans MS, Comic Sans, cursive;color: #15b6e7!important;">C-IT<span
-                            style="color: #fafafa!important;">HUB</span>
-                    </a>
+                    <span style="color: #fafafa!important;">
+                        <img src="assets/shashank1.png" width="150" height="50">
+                    </span>
                 </div>
             </nav>
             <div class="container-fluid main-wrapper" style="background: rgb(255, 255, 255); height: 100vh;">
@@ -239,7 +238,7 @@
                         </tbody>
                     </table>
                     <div class="row">
-                        <div class="table-list-container">
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12">
                             <table class="table table-hover shortlisted-employee" style="text-align: center;">
                                 <thead>
                                     <tr>
@@ -251,7 +250,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="table-list-container" style="text-align: center;">
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12"
+                            style="text-align: center;">
                             <table class="table table-hover on-hold-employee">
                                 <thead>
                                     <tr>
@@ -263,7 +263,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="table-list-container">
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12">
                             <table class="table table-hover next-round-employee" style="text-align: center;">
                                 <thead>
                                     <tr>
@@ -327,19 +327,6 @@
                     sideBar.style.transition = "0.4s";
                     sideBar.classList.add("side-bar-collapsed");
                     sideBar.classList.remove("side-bar");
-                }
-            }
-            if (parseInt(width, 10) <= 672) {
-                for (let s of secondaryTable) {
-                    s.style.width = "100%";
-                    s.style.transition = "1s";
-                    s.style.padding = "0 5% 0 5%  ";
-                }
-            } else {
-                for (let s of secondaryTable) {
-                    s.style.width = "30%";
-                    s.style.transition = "1s";
-                    s.style.padding = "0px 0px 0px 0px";
                 }
             }
             if (parseInt(width, 10) <= 567) {
