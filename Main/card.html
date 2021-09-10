@@ -122,10 +122,41 @@
           <span class="material-icons">menu</span>
         </div>
         <div class="container-fluid brand">
-          <a class="navbar-brand" href="#"
-            style="font-family:Comic Sans MS, Comic Sans, cursive;color: #15b6e7!important;">C-IT<span
-              style="color: #fafafa!important;">HUB</span>
-          </a>
+          <span style="margin-left: 2px;">
+            <img src="assets/shashank1.png" id="brand-img">
+          </span>
+        </div>
+        <div class="header-right">
+          <div class="hlink home-link" title="go back home">
+            <a style="background-color: rgba(255, 255, 255, 0); color: white;" class="word-link"
+              href="#home"><b>Home</b>
+            </a>
+            <div class="icon-link">
+              <span class="material-icons">
+                home
+              </span>
+            </div>
+          </div>
+          <div class="hlink contact-link" title="contact Us">
+            <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+              href="#contact"><b>Contact</b>
+            </a>
+            <div class="icon-link">
+              <span class="material-icons ">
+                support_agent
+              </span>
+            </div>
+          </div>
+          <div class="hlink about-link" title="about Us">
+            <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+              href="#about"><b>About</b>
+            </a>
+            <div class="icon-link">
+              <span class="material-icons">
+                help_center
+              </span>
+            </div>
+          </div>
         </div>
       </nav>
       <div class="main-wrapper container-fluid">
@@ -264,6 +295,9 @@
     var btnresume = document.getElementsByClassName("resume");
     var resumeIcon = document.getElementsByClassName("icon-resume");
     var secondaryTable = document.getElementsByClassName("table-list-container");
+    var logo = document.getElementById("brand-img");
+    var wordLink = document.getElementsByClassName("word-link");
+    var iconLink = document.getElementsByClassName("icon-link");
     //definition of an observer
     const resize_ob = new ResizeObserver(function (entries) {
       // since we are observing only a single element, so we access the first element in entries array
@@ -296,19 +330,26 @@
           sideBar.classList.remove("side-bar");
         }
       }
-      if (parseInt(width, 10) <= 672) {
-        for (let s of secondaryTable) {
-          s.style.width = "100%";
-          s.style.transition = "1s";
-          s.style.padding = "0 5% 0 5%  ";
+      //icons show/hide game : 
+      //header icons :
+      if (parseInt(width, 10) <= 567) {
+        logo.style.width = "100px";
+        logo.style.height = "30px";
+        for (let w of wordLink) {
+          w.style.display = "none";
+        }
+        for (let i of iconLink) {
+          i.style.display = "flex";
         }
       } else {
-        for (let s of secondaryTable) {
-          s.style.width = "30%";
-          s.style.transition = "1s";
-          s.style.padding = "0px 0px 0px 0px";
+        for (let w of wordLink) {
+          w.style.display = "inline-flex";
+        }
+        for (let i of iconLink) {
+          i.style.display = "none";
         }
       }
+      //table icons : 
       if (parseInt(width, 10) <= 567) {
         for (let b of btnresume) {
           b.style.display = "none";

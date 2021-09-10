@@ -27,7 +27,7 @@ body {
 
 .icon-toggle {
     width: 50px;
-    margin-right: 1rem;
+    margin-right: 2px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ body {
 
 .icon-toggle:hover {
     width: 50px;
-    margin-right: 1rem;
+    margin-right: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,50 @@ body {
 
 .brand {
     display: inline-block;
+    padding-left: 0px;
 }
+
+#brand-img{
+    width:130px;
+    height:45px;
+}
+.header-right{
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10px;
+}
+.hlink{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px 15px;
+    font-size: 1.1em;
+}
+.icon-link{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color:rgba(255, 255, 255, 0.5);
+}
+.icon-link:hover{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    cursor: pointer;
+    font-size: 36px;
+}
+.icon-link:active{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 36px;
+}
+
 
 .side-menu {
     transition: all 0.5s;
@@ -250,8 +293,8 @@ table .material-icons:hover {
     color: #2e4e8c;
 }
 
-table .material-icons:focus {
-    font-size: 34px;
+table .material-icons:active {
+    font-size: 36px;
     cursor: pointer;
 }
 
