@@ -27,7 +27,7 @@
             <div class="nav-bar">
                 <div class="nav-item home current">
                     <div class="icon"><span class="material-icons">
-                            home
+                            dashboard
                         </span></div>
                     <span class='label-icon label-lg'>Dashboard</span>
                 </div>
@@ -57,10 +57,41 @@
                     <span class="material-icons">menu</span>
                 </div>
                 <div class="container-fluid brand">
-                    <a class="navbar-brand" href="#"
-                        style="font-family:Comic Sans MS, Comic Sans, cursive;color: #15b6e7!important;">C-IT<span
-                            style="color: #fafafa!important;">HUB</span>
-                    </a>
+                    <span style="margin-left: 2px;">
+                        <img src="assets/shashank1.png" id="brand-img">
+                    </span>
+                </div>
+                <div class="header-right">
+                    <div class="hlink home-link" title="go back home">
+                        <a style="background-color: rgba(255, 255, 255, 0); color: white;" class="word-link"
+                            href="#home"><b>Home</b>
+                        </a>
+                        <div class="icon-link">
+                            <span class="material-icons">
+                                home
+                            </span>
+                        </div>
+                    </div>
+                    <div class="hlink contact-link" title="contact Us">
+                        <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+                            href="#contact"><b>Contact</b>
+                        </a>
+                        <div class="icon-link">
+                            <span class="material-icons ">
+                                support_agent
+                            </span>
+                        </div>
+                    </div>
+                    <div class="hlink about-link" title="about Us">
+                        <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+                            href="#about"><b>About</b>
+                        </a>
+                        <div class="icon-link">
+                            <span class="material-icons">
+                                help_center
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </nav>
             <div class="container-fluid main-wrapper" style="background: rgb(255, 255, 255); height: 100vh;">
@@ -74,7 +105,7 @@
                     <div class="nav-bar">
                         <div class="nav-item home current">
                             <div class="icon"><span class="material-icons">
-                                    home
+                                    dashboard
                                 </span></div>
                             <span class='label-icon label-lg'>Dashboard</span>
                         </div>
@@ -239,7 +270,7 @@
                         </tbody>
                     </table>
                     <div class="row">
-                        <div class="table-list-container">
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12">
                             <table class="table table-hover shortlisted-employee" style="text-align: center;">
                                 <thead>
                                     <tr>
@@ -251,7 +282,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="table-list-container" style="text-align: center;">
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12"
+                            style="text-align: center;">
                             <table class="table table-hover on-hold-employee">
                                 <thead>
                                     <tr>
@@ -263,7 +295,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="table-list-container">
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12">
                             <table class="table table-hover next-round-employee" style="text-align: center;">
                                 <thead>
                                     <tr>
@@ -283,6 +315,8 @@
     <script>
         //variable definition
         var show = false;
+        var brand = document.querySelector(".brand");
+        var tabs = document.querySelector(".tables-wrapper");
         const wrapper = document.querySelector(".wrapper");
         var main = wrapper.querySelector('.main');
         var hamburger = document.getElementById("hamburger-menu");
@@ -297,6 +331,9 @@
         var btnresume = document.getElementsByClassName("resume");
         var resumeIcon = document.getElementsByClassName("icon-resume");
         var secondaryTable = document.getElementsByClassName("table-list-container");
+        var logo = document.getElementById("brand-img");
+        var wordLink = document.getElementsByClassName("word-link");
+        var iconLink = document.getElementsByClassName("icon-link");
         //definition of an observer
         const resize_ob = new ResizeObserver(function (entries) {
             // since we are observing only a single element, so we access the first element in entries array
@@ -309,7 +346,11 @@
                 icontoggle.style.display = "flex";
                 sideBar.style.display = "none";
                 toggle.classList.add("icon-toggle");
+                logo.style.width = "110px";
+                logo.style.height = "40px";
             } else {
+                logo.style.width = "130px";
+                logo.style.height = "45px";
                 toggle.classList.remove("icon-toggle");
                 icontoggle.style.display = "none";
                 hamburger.style.display = "none";
@@ -329,20 +370,29 @@
                     sideBar.classList.remove("side-bar");
                 }
             }
-            if (parseInt(width, 10) <= 672) {
-                for (let s of secondaryTable) {
-                    s.style.width = "100%";
-                    s.style.transition = "1s";
-                    s.style.padding = "0 5% 0 5%  ";
+            //icons show/hide game : 
+            //header icons :
+            if (parseInt(width, 10) <= 567) {
+                logo.style.width = "100px";
+                logo.style.height = "30px";
+                for (let w of wordLink) {
+                    w.style.display = "none";
+                }
+                for (let i of iconLink) {
+                    i.style.display = "flex";
                 }
             } else {
-                for (let s of secondaryTable) {
-                    s.style.width = "30%";
-                    s.style.transition = "1s";
-                    s.style.padding = "0px 0px 0px 0px";
+                for (let w of wordLink) {
+                    w.style.display = "block";
+                }
+                for (let i of iconLink) {
+                    i.style.display = "none";
                 }
             }
+            //table icons :           
             if (parseInt(width, 10) <= 567) {
+                logo.style.width = "110px";
+                logo.style.height = "36px";
                 for (let b of btnresume) {
                     b.style.display = "none";
                 }
@@ -358,14 +408,17 @@
                 }
             }
         });
-        resize_ob.observe(wrapper);
 
+        resize_ob.observe(wrapper);
+        //behaviour of the header and the navbar
         toggle.addEventListener("click", () => {
             if (show) {
                 hamburger.style.display = "none";
                 hamburger.style.transition = "0.5s";
+                main.style.overflowY = "scroll";
                 show = false;
             } else {
+                main.style.overflowY = "unset";
                 hamburger.style.display = "block";
                 hamburger.style.width = "60vw";
                 hamburger.style.zIndex = "1";
@@ -376,7 +429,22 @@
                 }
                 show = true;
             }
-
+        });
+        brand.addEventListener("click", () => {
+            if (show) {
+                main.style.overflowY = "scroll";
+                hamburger.style.display = "none";
+                hamburger.style.transition = "0.5s";
+                show = false;
+            }
+        });
+        tabs.addEventListener("click", () => {
+            if (show) {
+                main.style.overflowY = "scroll";
+                hamburger.style.display = "none";
+                hamburger.style.transition = "0.5s";
+                show = false;
+            }
         });
     </script>
     <script>

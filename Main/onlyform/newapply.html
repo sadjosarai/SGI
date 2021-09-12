@@ -16,7 +16,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
 		integrity="sha384-r4NyP46KrjDl eawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJ4I" crossoringin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!---<link rel="stylesheet" type="text/css" href="css/style.css"> --->
 	<link rel="stylesheet" href="style.css" type="text/css">
@@ -31,6 +31,11 @@
 			background-size: 100%;
 			background-position: 0px -90px;
 			background-color: #07bae6;
+		}
+
+		.wrapper {
+			width: 100%;
+			min-height: 100vh;
 		}
 
 
@@ -111,6 +116,7 @@
 
 		div.register {
 			background-color: white;
+			margin: auto;
 			width: 100%;
 			font-size: 18px;
 			border-radius: 10px;
@@ -199,125 +205,158 @@
 			background-color: red;
 		}
 
-		.backward {
-			font-size: 1.2em;
+		#backward {
+			background-color: rgba(22, 78, 116, 0.7);
+			margin-left: 20px;
+			margin-top: 20px;
+			font-size: 1em;
 			font-weight: 800;
 			display: flex;
 			flex-direction: row;
 			justify-content: left;
 			align-items: center;
-			color: rgb(22, 78, 116);
-			width: 25%;
+			color: rgb(255, 255, 255);
+			width: 110px;
+			height: 30px;
+			border-radius: 5px;
+			box-shadow: inset -2px -2px 5px 2px black;
 		}
 
-		.backward:hover {
-			width: 25%;
-			font-size: 1.2em;
+		#backward:hover {
+			margin-top: 20px;
+			background-color: rgba(22, 78, 116, 0.9);
+			margin-left: 20px;
+			font-size: 1em;
 			font-weight: 800;
-			text-shadow: 1px 3px 4px rgb(173, 183, 240);
-			cursor: pointer;
 			display: flex;
 			flex-direction: row;
 			justify-content: left;
 			align-items: center;
-			color: rgb(15, 55, 82);
+			color: rgb(255, 255, 255);
+			width: 110px;
+			height: 30px;
+			border-radius: 5px;
+			box-shadow: inset -2px -2px 5px 2px black;
+			cursor: pointer;
 		}
+
+		/* @media screen and (max-width:562px) {
+			.main {
+				display: flex;
+				flex-direction: column;
+				justify-content: center; 
+				width: 400px; 
+				height: auto;
+				margin: 10px auto 10px auto;
+				width: 90%;
+			}
+		} */
 	</style>
 </head>
 
 <body>
 
-	<div class="main">
-		<div class="backward">
+	<div class="wrapper">
+		<div id="backward">
 			<span class="material-icons" style="margin-right:5px;">
 				first_page
 			</span>
 			<p>Go back</p>
 		</div>
-		<div class="register">
-			<h2>Application Form</h2>
-			<form id="register" method="post">
-				<label>1. Company Name : </label>
-				<br>
-				<input type="text" name="cname" id="name" placeholder="Enter Company Name">
-				<br><br>
+		<div class="main">
+			<div class="register">
+				<h2>Application Form</h2>
+				<form id="register" method="post">
+					<label>1. Company Name : </label>
+					<br>
+					<input type="text" name="cname" id="name" placeholder="Enter Company Name">
+					<br><br>
 
-				<label>2. No of Opening Available : </label>
-				<br>
-				<input type="number" id="name" placeholder="No of Opening Available">
-				<br><br>
+					<label>2. No of Opening Available : </label>
+					<br>
+					<input type="number" id="name" placeholder="No of Opening Available">
+					<br><br>
 
-				<label>3. Job type : </label>
-				<br>
-				<br>
-				<!-- <br><br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="text" name="type" id="full time">
-				&nbsp;
-				<span id="full">Full Time</span>
-				<br>
+					<label>3. Job type : </label>
+					<br>
+					<br>
+					<!-- <br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="text" name="type" id="full time">
+					&nbsp;
+					<span id="full">Full Time</span>
+					<br>
+	
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="text" name="type" id="parttime " placeholder="Enter Prefered Timing">
+					&nbsp;
+					<span id="part">Part Time</span>
+					<input type="text" name="des" id="des" style="margin-left:20px" placeholder="Enter Prefered Timing">
+					<br>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="type" id="shorttime" placeholder="eg 1 Month,2 Month">
+					&nbsp;
+					<span id="short">Short Time</span>
+					<input type="text" name="des" id="des" style="margin-left:10px" placeholder="eg 1 Month,2 Month">
+					<br><br> -->
 
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="text" name="type" id="parttime " placeholder="Enter Prefered Timing">
-				&nbsp;
-				<span id="part">Part Time</span>
-				<input type="text" name="des" id="des" style="margin-left:20px" placeholder="Enter Prefered Timing">
-				<br>
-				&nbsp;&nbsp;&nbsp;
-				<input type="text" name="type" id="shorttime" placeholder="eg 1 Month,2 Month">
-				&nbsp;
-				<span id="short">Short Time</span>
-				<input type="text" name="des" id="des" style="margin-left:10px" placeholder="eg 1 Month,2 Month">
-				<br><br> -->
+					<input type="radio" id="html" name="fav_language" value="HTML">
+					<label for="html">Full Time</label><br>
+					<input type="radio" id="css" name="fav_language" value="CSS">
+					<label for="css">Part Time</label>
 
-				<input type="radio" id="html" name="fav_language" value="HTML">
-				<label for="html">Full Time</label><br>
-				<input type="radio" id="css" name="fav_language" value="CSS">
-				<label for="css">Part Time</label>
+					<input type="text" id="time" name="time" placeholder="Enter preffered Time">
 
-				<input type="text" id="time" name="time" placeholder="Enter preffered Time">
-
-				<br>
-				<input type="radio" id="javascript" name="fav_language" value="JavaScript">
-				<label for="javascript">Short Time</label>
-
-
-				<input type="text" id="time" name="time" placeholder="eg 1 month, 2 month...">
-
-				<br><br>
+					<br>
+					<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+					<label for="javascript">Short Time</label>
 
 
-				<label>4. Salary Range : </label>
-				<br>
-				<input type="number" id="name" placeholder="Salary">
-				<br><br>
+					<input type="text" id="time" name="time" placeholder="eg 1 month, 2 month...">
 
-				<label>5. Job role : </label>
-				<br>
-				<input type="text" name="role" id="name" placeholder="eg. Manager, CA etc.">
-				<br><br>
+					<br><br>
 
-				<label>6. Prefered Skill : </label>
-				<br>
-				<input type="text" name="skill" id="name" placeholder="Prefered skill">
-				<br><br>
 
-				<label>7. Start Date : </label>
-				<br>
-				<input type="datetime" id="date" placeholder="dd/mm/yyyy">
-				<br><br>
+					<label>4. Salary Range : </label>
+					<br>
+					<input type="number" id="name" placeholder="Salary">
+					<br><br>
 
-				<label>8. Job location : </label>
-				<br>
-				<input type="text" name="location" id="name" placeholder="eg. Bangalore, Kolkata etc.">
-				<br><br>
+					<label>5. Job role : </label>
+					<br>
+					<input type="text" name="role" id="name" placeholder="eg. Manager, CA etc.">
+					<br><br>
 
-				<a href="newappied.html"><button type="submit" id="submit-btn"><a
-							href="newappied.html">Submit</a></button></a>
-				<br><br>
-			</form>
+					<label>6. Prefered Skill : </label>
+					<br>
+					<input type="text" name="skill" id="name" placeholder="Prefered skill">
+					<br><br>
+
+					<label>7. Start Date : </label>
+					<br>
+					<input type="datetime" id="date" placeholder="dd/mm/yyyy">
+					<br><br>
+
+					<label>8. Job location : </label>
+					<br>
+					<input type="text" name="location" id="name" placeholder="eg. Bangalore, Kolkata etc.">
+					<br><br>
+
+					<a href="newappied.html"><button type="submit" id="submit-btn"><a
+								href="newappied.html">Submit</a></button></a>
+					<br><br>
+				</form>
+			</div>
 		</div>
 	</div>
+	<script>
+		var submit = document.getElementById("backward");
+		submit.addEventListener('click', () => {
+			var ref = "../card.html"
+			submit.style.boxShadow = "inset -1px -1px 2px 1px black";
+			window.location.href = ref;
+		});
+	</script>
 
 </body>
 
