@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="side-bar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:rgb(253, 253, 253)">
+    <div class="wrapper">
+        <div class="side-bar-collapsed side-menu">
+            <div class="nav-title brand-name">
+                <p>Career-IT Hub</p>
+            </div>
+            <div class="nav-title admin-name">
+                <p>ADMIN NAME</p>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-item home current">
+                    <div class="icon"><span class="material-icons">
+                            dashboard
+                        </span></div>
+                    <span class='label-icon label-lg'>Dashboard</span>
+                </div>
+                <div class="nav-item job">
+                    <div class="icon"><span class="material-icons">
+                            work
+                        </span></div>
+                    <span class='label-icon label-lg'>Post a Job</span>
+                </div>
+                <div class="nav-item feed">
+                    <div class="icon"><span class="material-icons">
+                            dynamic_feed
+                        </span></div>
+                    <span class='label-icon label-lg'>Previously Posted Job</span>
+                </div>
+                <div class="nav-item group">
+                    <div class="icon"><span class="material-icons">
+                            group
+                        </span></div>
+                    <span class='label-icon label-lg'>HR</span>
+                </div>
+            </div>
+        </div>
+        <div class="main container-fluid">
+            <nav class="nav-container container-fluid" style="background-color: #000107!important;">
+                <div class="icon-toggle menu-icon">
+                    <span class="material-icons">menu</span>
+                </div>
+                <div class="container-fluid brand">
+                    <span style="margin-left: 2px;">
+                        <img src="assets/shashank1.png" id="brand-img">
+                    </span>
+                </div>
+                <div class="header-right">
+                    <div class="hlink home-link" title="go back home">
+                        <a style="background-color: rgba(255, 255, 255, 0); color: white;" class="word-link"
+                            href="#home"><b>Home</b>
+                        </a>
+                        <div class="icon-link">
+                            <span class="material-icons">
+                                home
+                            </span>
+                        </div>
+                    </div>
+                    <div class="hlink contact-link" title="contact Us">
+                        <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+                            href="#contact"><b>Contact</b>
+                        </a>
+                        <div class="icon-link">
+                            <span class="material-icons ">
+                                support_agent
+                            </span>
+                        </div>
+                    </div>
+                    <div class="hlink about-link" title="about Us">
+                        <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+                            href="#about"><b>About</b>
+                        </a>
+                        <div class="icon-link">
+                            <span class="material-icons">
+                                help_center
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid main-wrapper" style="background: rgb(255, 255, 255); height: 100vh;">
+                <div class="side-bar" id="hamburger-menu">
+                    <div class="nav-title brand-name">
+                        <p>Career-IT Hub</p>
+                    </div>
+                    <div class="nav-title admin-name">
+                        <p>ADMIN NAME</p>
+                    </div>
+                    <div class="nav-bar">
+                        <div class="nav-item home current">
+                            <div class="icon"><span class="material-icons">
+                                    dashboard
+                                </span></div>
+                            <span class='label-icon label-lg'>Dashboard</span>
+                        </div>
+                        <div class="nav-item job">
+                            <div class="icon"><span class="material-icons">
+                                    work
+                                </span></div>
+                            <span class='label-icon label-lg'>Post a Job</span>
+                        </div>
+                        <div class="nav-item feed">
+                            <div class="icon"><span class="material-icons">
+                                    dynamic_feed
+                                </span></div>
+                            <span class='label-icon label-lg'>Previously Posted Job</span>
+                        </div>
+                        <div class="nav-item hr">
+                            <div class="icon"><span class="material-icons">
+                                    group
+                                </span></div>
+                            <span class='label-icon label-lg'>HR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid tables-wrapper"
+                    style="margin-top:2rem; background-color:rgba(255, 255, 255, 0);">
+                    <table class="table table-hover main-table">
+                        <thead>
+                            <tr>
+                                <th scope="col"><b>Name</b></th>
+                                <th scope="col"><b>Resume</b></th>
+                                <th scope="col"><b>Status</b></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="fullhide">
+                                <td>SAMANTHA E. COnnor</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="fullhide1">
+                                <td>SECOND NAME WTF</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr id="fullhide2">
+                                <td>AFTOMATICA KALASHNIKOVA</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </tr>
+                            <tr id="fullhide3">
+                                <td>AMRAN BEN OUSMANI</td>
+                                <td>
+                                    <button style="background-color: #1e8293;" type="button"
+                                        class="btn btn-primary btn-sm resume">View
+                                        Resume
+                                    </button>
+                                    <div class="icon-resume">
+                                        <span class="material-icons resume-icon">
+                                            article
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="dropdown dropright">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-toggle="dropdown">
+                                            Status
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="dropdown-item" onclick="shortlist(this)">Shortlist</li>
+                                                <li class="dropdown-item" onclick="reject(this)">Reject</li>
+                                                <li class="dropdown-item" onclick="onHold(this)">On Hold </li>
+                                                <li class="dropdown-item" onclick="nextRound(this)">Select For Next
+                                                    Round
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                            <table class="table table-hover shortlisted-employee" style="text-align: center;">
+                                <thead>
+                                    <tr>
+                                        <th><b>Short Listed Employee</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12"
+                            style="text-align: center;">
+                            <table class="table table-hover on-hold-employee">
+                                <thead>
+                                    <tr>
+                                        <th><b>On Hold</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-list-container col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                            <table class="table table-hover next-round-employee" style="text-align: center;">
+                                <thead>
+                                    <tr>
+                                        <th><b>Select For Next Round</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //variable definition
+        var show = false;
+        var brand = document.querySelector(".brand");
+        var tabs = document.querySelector(".tables-wrapper");
+        const wrapper = document.querySelector(".wrapper");
+        var main = wrapper.querySelector('.main');
+        var hamburger = document.getElementById("hamburger-menu");
+        var hamburgerItems = document.getElementsByClassName("nav-item");
+        var sideBar = wrapper.querySelector(".side-menu");
+        var title = sideBar.querySelector(".nav-title");
+        var navbar = sideBar.querySelector(".nav-bar");
+        var label = document.querySelector('.label-lg');
+        var toggle = document.querySelector(".menu-icon");
+        var icontoggle = document.querySelector(".icon-toggle");
+        var mainTable = document.querySelector(".main-table");
+        var btnresume = document.getElementsByClassName("resume");
+        var resumeIcon = document.getElementsByClassName("icon-resume");
+        var secondaryTable = document.getElementsByClassName("table-list-container");
+        var logo = document.getElementById("brand-img");
+        var wordLink = document.getElementsByClassName("word-link");
+        var iconLink = document.getElementsByClassName("icon-link");
+        //definition of an observer
+        const resize_ob = new ResizeObserver(function (entries) {
+            // since we are observing only a single element, so we access the first element in entries array
+            let rect = entries[0].contentRect;
+            // current width & height
+            let width = rect.width;
+            let height = rect.height;
+
+            if (parseInt(width, 10) <= 992) {
+                icontoggle.style.display = "flex";
+                sideBar.style.display = "none";
+                toggle.classList.add("icon-toggle");
+                logo.style.width = "110px";
+                logo.style.height = "40px";
+            } else {
+                logo.style.width = "130px";
+                logo.style.height = "45px";
+                toggle.classList.remove("icon-toggle");
+                icontoggle.style.display = "none";
+                hamburger.style.display = "none";
+                show = false;
+                sideBar.style.display = "block";
+                toggle.classList.add("icon-toggle");
+                sideBar.onmouseover = (e) => {
+                    e.preventDefault();
+                    sideBar.style.transition = "0.4s";
+                    sideBar.classList.remove("side-bar-collapsed");
+                    sideBar.classList.add("side-bar");
+                }
+                sideBar.onmouseout = (e) => {
+                    e.preventDefault();
+                    sideBar.style.transition = "0.4s";
+                    sideBar.classList.add("side-bar-collapsed");
+                    sideBar.classList.remove("side-bar");
+                }
+            }
+            //icons show/hide game : 
+            //header icons :
+            if (parseInt(width, 10) <= 567) {
+                logo.style.width = "100px";
+                logo.style.height = "30px";
+                for (let w of wordLink) {
+                    w.style.display = "none";
+                }
+                for (let i of iconLink) {
+                    i.style.display = "flex";
+                }
+            } else {
+                for (let w of wordLink) {
+                    w.style.display = "block";
+                }
+                for (let i of iconLink) {
+                    i.style.display = "none";
+                }
+            }
+            //table icons :           
+            if (parseInt(width, 10) <= 567) {
+                logo.style.width = "110px";
+                logo.style.height = "36px";
+                for (let b of btnresume) {
+                    b.style.display = "none";
+                }
+                for (let r of resumeIcon) {
+                    r.style.display = "flex";
+                }
+            } else {
+                for (let b of btnresume) {
+                    b.style.display = "block";
+                }
+                for (let r of resumeIcon) {
+                    r.style.display = "none";
+                }
+            }
+        });
+
+        resize_ob.observe(wrapper);
+        //behaviour of the header and the navbar
+        toggle.addEventListener("click", () => {
+            if (show) {
+                hamburger.style.display = "none";
+                hamburger.style.transition = "0.5s";
+                main.style.overflowY = "scroll";
+                show = false;
+            } else {
+                main.style.overflowY = "unset";
+                hamburger.style.display = "block";
+                hamburger.style.width = "60vw";
+                hamburger.style.zIndex = "1";
+                hamburger.style.transition = "0.5s";
+                for (let h of hamburgerItems) {
+                    h.style.jsutifyContent = "start";
+                    h.style.margin = "10px 0px 10px 0px";
+                }
+                show = true;
+            }
+        });
+        brand.addEventListener("click", () => {
+            if (show) {
+                main.style.overflowY = "scroll";
+                hamburger.style.display = "none";
+                hamburger.style.transition = "0.5s";
+                show = false;
+            }
+        });
+        tabs.addEventListener("click", () => {
+            if (show) {
+                main.style.overflowY = "scroll";
+                hamburger.style.display = "none";
+                hamburger.style.transition = "0.5s";
+                show = false;
+            }
+        });
+    </script>
+    <script>
+        var home = document.getElementsByClassName("home");
+        var postaJobs = document.getElementsByClassName("job");
+        var prPostedJobs = document.getElementsByClassName("feed");
+        var hr = document.getElementsByClassName("hr");
+
+        for (let h of home) {
+            h.addEventListener("click", () => {
+                window.location.href = "dashboard.html";
+            });
+        }
+        for (let p of postaJobs) {
+            p.addEventListener("click", () => {
+                window.location.href = "onlyform/newapply.html";
+            });
+        }
+        for (let pr of prPostedJobs) {
+            pr.addEventListener("click", () => {
+                window.location.href = "card.html";
+            });
+        }
+        for (let r of hr) {
+            r.addEventListener("click", () => {
+                window.location.href = "/";
+            });
+        }
+    </script>
+    <script>
+        function shortlist(e) {
+            var mainTable = document.querySelector(".main-table");
+            var shortlistedEmployee = document.querySelector(".shortlisted-employee");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var name = mainTable.rows[i].cells[0].innerHTML;
+            var shortlistedEmployeeTableLastRow = shortlistedEmployee.rows.length - 1;
+            let nextRow = shortlistedEmployeeTableLastRow + 1;
+            var ex = false;
+            for (let j = 0; j <= shortlistedEmployeeTableLastRow; j++) {
+                if (shortlistedEmployee.rows[j].cells[0].innerHTML == name) {
+                    ex = true;
+                    break;
+                }
+            }
+            if (ex) {
+                alert("employee already shortlisted");
+            } else {
+                var row = shortlistedEmployee.insertRow(nextRow);
+                var cell = row.insertCell(0);
+                cell.innerHTML = name;
+            }
+        }
+        function onHold(e) {
+            var mainTable = document.querySelector(".main-table");
+            var onHoldEmployee = document.querySelector(".on-hold-employee");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var name = mainTable.rows[i].cells[0].innerHTML;
+            var onHoldEmployeeTableLastRow = onHoldEmployee.rows.length - 1;
+            let nextRow = onHoldEmployeeTableLastRow + 1;
+            var ex = false;
+            for (let j = 0; j <= onHoldEmployeeTableLastRow; j++) {
+                if (onHoldEmployee.rows[j].cells[0].innerHTML == name) {
+                    ex = true;
+                    break;
+                }
+            }
+            if (ex) {
+                alert("employee already on hold");
+            } else {
+                var row = onHoldEmployee.insertRow(nextRow);
+                var cell = row.insertCell(0);
+                cell.innerHTML = name;
+            }
+        }
+        function reject(e) {
+            var mainTable = document.querySelector(".main-table");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var action = confirm("are you sure you want to reject this employee? he will be permanently deleted from the table!");
+            if (action) {
+                mainTable.deleteRow(i);
+            }
+        }
+        function nextRound(e) {
+            var mainTable = document.querySelector(".main-table");
+            var nextRoundEmployee = document.querySelector(".next-round-employee");
+            var i = e.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+            var name = mainTable.rows[i].cells[0].innerHTML;
+            var nextRoundEmployeeTableLastRow = nextRoundEmployee.rows.length - 1;
+            let nextRow = nextRoundEmployeeTableLastRow + 1;
+            var ex = false;
+            for (let j = 0; j <= nextRoundEmployeeTableLastRow; j++) {
+                if (nextRoundEmployee.rows[j].cells[0].innerHTML == name) {
+                    ex = true;
+                    break;
+                }
+            }
+            if (ex) {
+                alert("employee already on next round list");
+            } else {
+                var row = nextRoundEmployee.insertRow(nextRow);
+                var cell = row.insertCell(0);
+                cell.innerHTML = name;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Form</title>
+	<!--<link rel="stylesheet" type="text/css" href="style1.css">-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200@display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+
+			background-size: 120%;
+			background-position: 0px 0px;
+			background-color: #07bae6;
+
+		}
+
+		.grand_parent {
+			width: 100vw;
+			height: auto;
+			color: #fff;
+			background-image: linear-gradient(-45deg, #2e4e8c 0%, #00ccff 100%);
+
+		}
+
+		nav {
+			width: 100%;
+			height: 4.5rem;
+			background: black;
+
+		}
+
+		.lap {
+			max-width: 75rem;
+			margin: auto;
+			padding-top: 0.07rem;
+			padding-left: 0.75rem;
+		}
+
+		.logo {
+			width: 200px;
+			height: 70px;
+		}
+
+		.parent1 {
+
+			width: 180px;
+			height: 57vw;
+			float: left;
+			justify-content: space-around;
+			transition: all 0.2 linear;
+			flex-wrap: wrap;
+			display: flex;
+			flex-direction: column;
+		}
+
+
+		h3 {
+			color: white;
+			float: right;
+			padding-right: 35%;
+			padding-top: 20px;
+			font-size: 20px;
+
+		}
+
+		div.tap {
+			width: 400px;
+			margin: 10px auto 0px auto;
+			color: black;
+		}
+
+
+
+		div.main {
+			width: 400px;
+			margin: 30px auto 0px auto;
+
+		}
+
+		h2 {
+			text-align: center;
+			padding: 20px;
+			font-family: sans-serif;
+			color: black;
+		}
+
+		div.register {
+			background-color: white;
+			width: 100%;
+			font-size: 18px;
+			border-radius: 10px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			box-shadow: 2px 2px 15px rgb(0, 0, 0, 0.3);
+			color: black;
+			margin-top: 60px;
+			height: auto;
+		}
+
+
+		form#register {
+			margin: 40px;
+
+		}
+
+		label {
+			font-family: sans-serif;
+			font-size: 18px;
+			font-style: italic;
+			color: black;
+		}
+
+		input#name {
+			width: 300px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			outline: 0;
+			padding: 7px;
+			background-color: #fff;
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		#submit {
+			text-align: center;
+			width: 90px;
+			padding: 9px;
+			font-size: 16px;
+			font-family: sans-serif;
+			font-weight: 60;
+			border: none;
+			border-radius: 30px;
+			background-color: rgba(255, 100, 0, 0.8);
+			color: #fff;
+			cursor: pointer;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+			margin-bottom: 10px;
+
+		}
+
+		#cancel {
+			text-align: center;
+			width: 90px;
+			padding: 9px;
+			font-size: 16px;
+			font-family: sans-serif;
+			font-weight: 60;
+			border: none;
+			border-radius: 30px;
+			background-color: rgba(255, 100, 0, 0.8);
+			color: #fff;
+			cursor: pointer;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		a:hover {
+			background-color: red;
+
+		}
+
+		ul img {
+			float: left;
+			border-radius: 7px;
+
+		}
+
+		label,
+		span,
+		h2 {
+			text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+
+
+	<div class="main">
+		<div class="register">
+			<h2>Applied form</h2>
+			<form id="register" action="../card.html" acmethod="post">
+				<label>Company Name : </label>
+				<br>
+				<input type="text" name="cname" id="name">
+				<br><br>
+
+				<label> No of Opening Available : </label>
+				<br>
+				<input type="number" id="name">
+				<br><br>
+
+				<label> Job type : </label><br>
+				<input type="text" id="name">
+				<br><br>
+
+				<label> Salary Range : </label>
+				<br>
+				<input type="number" id="name">
+				<br><br>
+
+				<label> Job role : </label>
+				<br>
+				<input type="text" name="role" id="name">
+				<br><br>
+
+				<label> Prefered Skill : </label>
+				<br>
+				<input type="text" name="skill" id="name">
+				<br><br>
+
+				<label> Start Date : </label>
+				<br>
+				<input type="datetime" id="name">
+				<br><br>
+
+				<label> Job location : </label>
+				<br>
+				<input type="text" name="location" id="name">
+				<br><br>
+
+				<button type="submit" id="submit"><b>Post</b></button>
+
+				<button type="cancel" id="cancel"><b>Cancel</b></button>
+				<br><br>
+			</form>
+		</div>
+	</div>
+	<script>
+		var submit = document.getElementById("submit");
+		submit.addEventListener('click', () => {
+			window.location.href = form.getAttribute("action");
+		});
+	</script>
+
+</body>
+
+</html>

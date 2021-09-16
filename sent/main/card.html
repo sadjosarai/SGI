@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="side-bar.css">
+
+  <title>Cards</title>
+</head>
+
+<style type="text/css">
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body {
+    font-family: arial;
+  }
+
+  .main-body {
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 2%;
+  }
+
+  .card {
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 6%;
+  }
+
+  .image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+
+
+  }
+
+  .title {
+
+    text-align: center;
+    padding: 10px;
+
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .des {
+    padding: 3px;
+    text-align: center;
+
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .main-body button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .main-body button:hover {
+    background-color: black;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="side-bar-collapsed side-menu">
+      <div class="nav-title brand-name">
+        <p>Career-IT Hub</p>
+      </div>
+      <div class="nav-title admin-name">
+        <p>ADMIN NAME</p>
+      </div>
+      <div class="nav-bar">
+        <div class="nav-item home ">
+          <div class="icon"><span class="material-icons">
+              home
+            </span></div>
+          <span class='label-icon label-lg'>Dashboard</span>
+        </div>
+        <div class="nav-item job">
+          <div class="icon"><span class="material-icons">
+              work
+            </span></div>
+          <span class='label-icon label-lg'>Post a Job</span>
+        </div>
+        <div class="nav-item feed current">
+          <div class="icon"><span class="material-icons">
+              dynamic_feed
+            </span></div>
+          <span class='label-icon label-lg'>Previously Posted Job</span>
+        </div>
+        <div class="nav-item group">
+          <div class="icon"><span class="material-icons">
+              group
+            </span></div>
+          <span class='label-icon label-lg'>HR</span>
+        </div>
+      </div>
+    </div>
+    <div class="main container-fluid">
+      <nav class="nav-container container-fluid" style="background-color: #000107!important;">
+        <div class="icon-toggle menu-icon">
+          <span class="material-icons">menu</span>
+        </div>
+        <div class="container-fluid brand">
+          <span style="margin-left: 2px;">
+            <img src="assets/shashank1.png" id="brand-img">
+          </span>
+        </div>
+        <div class="header-right">
+          <div class="hlink home-link" title="go back home">
+            <a style="background-color: rgba(255, 255, 255, 0); color: white;" class="word-link"
+              href="#home"><b>Home</b>
+            </a>
+            <div class="icon-link">
+              <span class="material-icons">
+                home
+              </span>
+            </div>
+          </div>
+          <div class="hlink contact-link" title="contact Us">
+            <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+              href="#contact"><b>Contact</b>
+            </a>
+            <div class="icon-link">
+              <span class="material-icons ">
+                support_agent
+              </span>
+            </div>
+          </div>
+          <div class="hlink about-link" title="about Us">
+            <a style="background-color:rgba(255, 255, 255, 0); color:white;" class="word-link"
+              href="#about"><b>About</b>
+            </a>
+            <div class="icon-link">
+              <span class="material-icons">
+                help_center
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="main-wrapper container-fluid">
+        <div class="side-bar" id="hamburger-menu">
+          <div class="nav-title brand-name">
+            <p>Career-IT Hub</p>
+          </div>
+          <div class="nav-title admin-name">
+            <p>ADMIN NAME</p>
+          </div>
+          <div class="nav-bar">
+            <div class="nav-item home">
+              <div class="icon"><span class="material-icons">
+                  home
+                </span></div>
+              <span class='label-icon label-lg'>Dashboard</span>
+            </div>
+            <div class="nav-item job">
+              <div class="icon"><span class="material-icons">
+                  work
+                </span></div>
+              <span class='label-icon label-lg'>Post a Job</span>
+            </div>
+            <div class="nav-item feed current">
+              <div class="icon"><span class="material-icons">
+                  dynamic_feed
+                </span></div>
+              <span class='label-icon label-lg'>Previously Posted Job</span>
+            </div>
+            <div class="nav-item hr">
+              <div class="icon"><span class="material-icons">
+                  group
+                </span></div>
+              <span class='label-icon label-lg'>HR</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper container-fluid">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="image">
+                  <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
+                </div>
+                <div class="title">
+                  <h1>
+                    INFOSYS</h1>
+                </div>
+                <div class="des">
+                  <p>Role-Web Development</p>
+                  <P>Selected-5</P>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="image">
+                  <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
+                </div>
+                <div class="title">
+                  <h1>
+                    INFOSYS</h1>
+                </div>
+                <div class="des">
+                  <p>Role-Machine Learning</p>
+                  <P>Selected-8</P>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="image">
+                  <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
+                </div>
+                <div class="title">
+                  <h1>
+                    INFOSYS</h1>
+                </div>
+                <div class="des">
+                  <p>Role-Cloud Computing</p>
+                  <P>Selected-3</P>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="image">
+                  <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
+                </div>
+                <div class="title">
+                  <h1>
+                    INFOSYS</h1>
+                </div>
+                <div class="des">
+                  <p>Role-Python Developer</p>
+                  <P>Selected-15</P>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="image">
+                  <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX6425671.jpg">
+                </div>
+                <div class="title">
+                  <h1>
+                    INFOSYS</h1>
+                </div>
+                <div class="des">
+                  <p>Role-Cyber Security</p>
+                  <P>Selected-9</P>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //variable definition
+    var show = false;
+    const wrapper = document.querySelector(".wrapper");
+    var main = wrapper.querySelector('.main');
+    var brand = document.querySelector(".brand");
+    var cards = document.querySelector(".card-wrapper");
+    var hamburger = document.getElementById("hamburger-menu");
+    var hamburgerItems = document.getElementsByClassName("nav-item");
+    var sideBar = wrapper.querySelector(".side-menu");
+    var title = sideBar.querySelector(".nav-title");
+    var navbar = sideBar.querySelector(".nav-bar");
+    var label = document.querySelector('.label-lg');
+    var toggle = document.querySelector(".menu-icon");
+    var icontoggle = document.querySelector(".icon-toggle");
+    var mainTable = document.querySelector(".main-table");
+    var btnresume = document.getElementsByClassName("resume");
+    var resumeIcon = document.getElementsByClassName("icon-resume");
+    var secondaryTable = document.getElementsByClassName("table-list-container");
+    var logo = document.getElementById("brand-img");
+    var wordLink = document.getElementsByClassName("word-link");
+    var iconLink = document.getElementsByClassName("icon-link");
+    //definition of an observer
+    const resize_ob = new ResizeObserver(function (entries) {
+      // since we are observing only a single element, so we access the first element in entries array
+      let rect = entries[0].contentRect;
+      // current width & height
+      let width = rect.width;
+      let height = rect.height;
+
+      if (parseInt(width, 10) <= 992) {
+        icontoggle.style.display = "flex";
+        sideBar.style.display = "none";
+        toggle.classList.add("icon-toggle");
+      } else {
+        toggle.classList.remove("icon-toggle");
+        icontoggle.style.display = "none";
+        hamburger.style.display = "none";
+        show = false;
+        sideBar.style.display = "block";
+        toggle.classList.add("icon-toggle");
+        sideBar.onmouseover = (e) => {
+          e.preventDefault();
+          sideBar.style.transition = "0.4s";
+          sideBar.classList.remove("side-bar-collapsed");
+          sideBar.classList.add("side-bar");
+        }
+        sideBar.onmouseout = (e) => {
+          e.preventDefault();
+          sideBar.style.transition = "0.4s";
+          sideBar.classList.add("side-bar-collapsed");
+          sideBar.classList.remove("side-bar");
+        }
+      }
+      //icons show/hide game : 
+      //header icons :
+      if (parseInt(width, 10) <= 567) {
+        logo.style.width = "100px";
+        logo.style.height = "30px";
+        for (let w of wordLink) {
+          w.style.display = "none";
+        }
+        for (let i of iconLink) {
+          i.style.display = "flex";
+        }
+      } else {
+        for (let w of wordLink) {
+          w.style.display = "inline-flex";
+        }
+        for (let i of iconLink) {
+          i.style.display = "none";
+        }
+      }
+      //table icons : 
+      if (parseInt(width, 10) <= 567) {
+        for (let b of btnresume) {
+          b.style.display = "none";
+        }
+        for (let r of resumeIcon) {
+          r.style.display = "flex";
+        }
+      } else {
+        for (let b of btnresume) {
+          b.style.display = "block";
+        }
+        for (let r of resumeIcon) {
+          r.style.display = "none";
+        }
+      }
+    });
+    resize_ob.observe(wrapper);
+
+    toggle.addEventListener("click", () => {
+      if (show) {
+        hamburger.style.display = "none";
+        hamburger.style.transition = "0.5s";
+        main.style.overflowY = "scroll";
+        show = false;
+      } else {
+        main.style.overflowY = "unset";
+        hamburger.style.display = "block";
+        hamburger.style.width = "60vw";
+        hamburger.style.zIndex = "1";
+        hamburger.style.transition = "0.5s";
+        for (let h of hamburgerItems) {
+          h.style.jsutifyContent = "start";
+          h.style.margin = "10px 0px 10px 0px";
+        }
+        show = true;
+      }
+    });
+    brand.addEventListener("click", () => {
+      if (show) {
+        main.style.overflowY = "scroll";
+        hamburger.style.display = "none";
+        hamburger.style.transition = "0.5s";
+        show = false;
+      }
+    });
+    cards.addEventListener("click", () => {
+      if (show) {
+        main.style.overflowY = "scroll";
+        hamburger.style.display = "none";
+        hamburger.style.transition = "0.5s";
+        show = false;
+      }
+    });
+  </script>
+  <script>
+    var home = document.getElementsByClassName("home");
+    var postaJobs = document.getElementsByClassName("job");
+    var prPostedJobs = document.getElementsByClassName("feed");
+    var hr = document.getElementsByClassName("hr");
+
+    for (let h of home) {
+      h.addEventListener("click", () => {
+        window.location.href = "dashboard.html";
+      });
+    }
+    for (let p of postaJobs) {
+      p.addEventListener("click", () => {
+        window.location.href = "onlyform/newapply.html";
+      });
+    }
+    for (let pr of prPostedJobs) {
+      pr.addEventListener("click", () => {
+        window.location.href = "card.html";
+      });
+    }
+    for (let r of hr) {
+      r.addEventListener("click", () => {
+        window.location.href = "/";
+      });
+    }
+  </script>
+</body>
+
+</html>
